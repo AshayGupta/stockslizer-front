@@ -4,6 +4,7 @@ import Settings from "@/pages/Settings";
 import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { SonnerToaster } from "./components/Toaster";
+import Topbar from "./components/Topbar";
 
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
         <div className="flex">
           <Sidebar />
           <div className="flex-1 min-w-0">
-            {/* <Topbar onChange={triggerRefresh} /> */}
+            <Topbar onChange={triggerRefresh} />
             <main key={refreshKey} className="min-h-[calc(100vh-3.5rem)]">
               <Routes>
                 {/* <Route path="/" element={<Dashboard />} /> */}

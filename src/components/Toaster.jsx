@@ -1,4 +1,4 @@
-import { Toaster } from "sonner";
+import { Toaster, toast } from "sonner";
 
 export const SonnerToaster = () => {
   return (
@@ -14,5 +14,17 @@ export const SonnerToaster = () => {
         },
       }}
     />
+  );
+};
+
+export const ToastSuccess = () => {
+  return (
+    toast.success(`Scan complete · ${data.new_notifications} new alert${data.new_notifications === 1 ? "" : "s"}`)
+  );
+};
+
+export const ToastError = () => {
+  return (
+    toast.error("Scan failed")
   );
 };
