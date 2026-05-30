@@ -20,7 +20,7 @@ const NavItem = ({ to, icon: Icon, label, testId }) => {
   );
 };
 
-const Sidebar = ({ notifCount = 0 }) => {
+const Sidebar = () => {
   return (
     <aside className="w-60 shrink-0 h-screen sticky top-0 border-r border-[#e9e9e9] bg-[#F8FAFC] flex flex-col">
       <div className="px-4 py-5 border-b border-[#e9e9e9] flex items-center gap-2">
