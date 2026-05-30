@@ -36,7 +36,7 @@ const Sidebar = () => {
 
       <nav className="flex-1 p-3 space-y-1">
         <div className="text-[10px] uppercase tracking-[0.18em] text-[#6B7280] px-3 pt-2 pb-2 font-semibold">Navigate</div>
-        <NavItem to="/" icon={FiHome} label="Dashboard" testId="nav-dashboard" iconColor="#0A84FF" />
+        <NavItem to="/" icon={FiHome} label="Dashboard" testId="nav-dashboard" iconColor="#FF3B30" />
         <NavItem to="/watchlist" icon={FiBarChart2} label="Watchlist" testId="nav-watchlist" iconColor="#00D26A" />
         <NavItem to="/news" icon={FiSearch} label="News" testId="nav-news" iconColor="#0A84FF" />
         <NavItem to="/alerts" icon={FiBell} label="Alerts" testId="nav-alerts" iconColor="#FFB020" />

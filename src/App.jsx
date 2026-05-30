@@ -1,10 +1,11 @@
 import "@/App.css";
 import Sidebar from "@/components/Sidebar";
+import { SonnerToaster } from "@/components/Toaster";
+import Topbar from "@/components/Topbar";
+import News from "@/pages/News";
 import Settings from "@/pages/Settings";
 import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { SonnerToaster } from "./components/Toaster";
-import Topbar from "./components/Topbar";
 
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
                 {/* <Route path="/watchlist" element={<Watchlist />} /> */}
                 {/* <Route path="/stock/:symbol" element={<StockDetail />} /> */}
                 {/* <Route path="/alerts" element={<Alerts />} /> */}
-                {/* <Route path="/news" element={<News />} /> */}
+                <Route path="/news" element={<News />} />
                 <Route path="/settings" element={<Settings />} />
               </Routes>
             </main>
