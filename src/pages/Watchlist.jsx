@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { FiSearch, FiPlus } from "react-icons/fi";
+import { FiSearch } from "react-icons/fi";
 
 const SAMPLE = [
   { symbol: "RELIANCE.NS", name: "Reliance Industries" },
@@ -7,7 +7,6 @@ const SAMPLE = [
   { symbol: "INFY.NS", name: "Infosys" },
   { symbol: "HDFCBANK.NS", name: "HDFC Bank" },
   { symbol: "ICICIBANK.NS", name: "ICICI Bank" },
-  // ...existing code...
 ];
 
 const Watchlist = () => {
@@ -31,7 +30,7 @@ const Watchlist = () => {
 
   return (
     <div className="w-60 bg-[#fff] border border-[#e9e9e9] h-full flex flex-col">
-      <div className="flex-shrink-0 p-2 border-b border-[#f3f4f6]">
+      <div className="fixed w-59 bg-white flex-shrink-0 p-2 border-b border-b-[#f3f4f6]">
         <div className="flex items-center gap-2">
           <div className="relative flex-1">
             <FiSearch size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-[#6B7280]" />
@@ -54,7 +53,7 @@ const Watchlist = () => {
         </div>
       </div>
 
-      <ul className="flex-1 overflow-auto">
+      <ul className="flex-1 mt-13 overflow-auto">
         {filtered.map((it) => (
           <li key={it.symbol}>
             <a
