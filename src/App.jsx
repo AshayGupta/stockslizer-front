@@ -4,6 +4,7 @@ import { SonnerToaster } from "@/components/Toaster";
 import Topbar from "@/components/Topbar";
 import News from "@/pages/News";
 import Settings from "@/pages/Settings";
+import Watchlist from "@/pages/Watchlist";
 import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
@@ -22,7 +23,7 @@ function App() {
             <main key={refreshKey} className="min-h-[calc(100vh-3.5rem)]">
               <Routes>
                 {/* <Route path="/" element={<Dashboard />} /> */}
-                {/* <Route path="/watchlist" element={<Watchlist />} /> */}
+                <Route path="/watchlist" element={<Watchlist />} />
                 {/* <Route path="/stock/:symbol" element={<StockDetail />} /> */}
                 {/* <Route path="/alerts" element={<Alerts />} /> */}
                 <Route path="/news" element={<News />} />
