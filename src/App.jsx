@@ -14,13 +14,15 @@ function App() {
   const triggerRefresh = () => setRefreshKey((k) => k + 1);
 
   return (
-    <div className="App min-h-screen bg-[#fff] text-[#111827]">
+    <div className="h-screen bg-[#fff] text-[#111827]">
       <BrowserRouter>
-        <div className="flex">
+        <div className="flex h-full">
           <Sidebar />
-          <div className="flex-1 min-w-0">
+
+          <div className="flex-1 flex flex-col min-h-0">
             <Topbar onChange={triggerRefresh} />
-            <main key={refreshKey} className="min-h-[calc(100vh-3.5rem)]">
+
+            <main key={refreshKey} className="flex-1 min-h-0 overflow-hidden">
               <Routes>
                 {/* <Route path="/" element={<Dashboard />} /> */}
                 <Route path="/watchlist" element={<Watchlist />} />
