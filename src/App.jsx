@@ -7,10 +7,9 @@ import News from "@/pages/News/News";
 import Settings from "@/pages/Settings/Settings";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-
 function App() {
   return (
-    <div className="h-screen bg-[#fff] text-[#111827]">
+    <div className="h-screen">
       <BrowserRouter>
         <div className="flex h-full">
           <Sidebar />
@@ -24,7 +23,7 @@ function App() {
               </Routes>
             </main>
           </div>
-          
+
         </div>
 
         <SonnerToaster />

@@ -23,6 +23,7 @@
 
   --default-font-size: 0.725rem;
   --default-font-weight: 500;
+  
 }
 
 /* =====================================================
@@ -34,7 +35,7 @@
   --bg-sidebar: #fafbfc;
   --bg-card: #ffffff;
   --bg-hover: #e8edf3;
-  --active-bg: #eef4ff;
+  --bg-active: #eef4ff;
 
   --border: #e5e7eb;
   --border-light: #f3f4f6;
@@ -56,6 +57,9 @@
   --tab-active: #2563eb;
 
   ---active-border: #60a5fa;
+
+  --seperator: #f1f5f9;
+
 }
 
 /* =====================================================
@@ -67,7 +71,7 @@
   --bg-sidebar: #0f172a;
   --bg-card: #121826;
   --bg-hover: #253142;
-  --bg-active: #1f2937;
+  --bg-active: rgba(34,211,238,.12);
 
   --border: #243041;
   --border-light: #1e293b;
@@ -88,9 +92,7 @@
 
   --tab-active: #22d3ee;
 
-  --active-bg: rgba(34,211,238,.12);
   --active-border: #22d3ee;
-
 }
 
 /* =====================================================

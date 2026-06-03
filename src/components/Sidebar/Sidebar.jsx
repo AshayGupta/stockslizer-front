@@ -21,8 +21,8 @@ const NavItem = ({ to, icon: Icon, label, testId, iconColor }) => {
 
 const Sidebar = () => {
   return (
-    <aside className="sidebar w-50 shrink-0 h-screen flex flex-col">
-      <div className="sidebar-header">
+    <aside className="sidebar w-50 shrink-0 h-screen flex flex-col shadow-md">
+      <div className="sidebar-header shadow-sm">
         <div className="w-8 h-8 sidebar-brand-icon">
           <FiBarChart2 size={18} className="text-white" />
         </div>
@@ -32,7 +32,7 @@ const Sidebar = () => {
         </div>
       </div>
 
-      <nav className="sidebar-nav">
+      <nav className="sidebar-nav shadow-sm">
         <div className="sidebar-section-label">Navigate</div>
         <NavItem to="/dashboard" icon={FiGrid} label="Dashboard" testId="nav-dashboard" iconColor="#FF3B30" />
         <NavItem to="/news" icon={FiFileText} label="News" testId="nav-news" iconColor="#0A84FF" />
