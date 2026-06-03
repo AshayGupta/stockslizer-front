@@ -34,8 +34,7 @@ const Sidebar = () => {
 
       <nav className="sidebar-nav">
         <div className="sidebar-section-label">Navigate</div>
-        <NavItem to="/" icon={FiHome} label="Dashboard" testId="nav-dashboard" iconColor="#FF3B30" />
-        <NavItem to="/watchlist" icon={FiBarChart2} label="Watchlist" testId="nav-watchlist" iconColor="#00D26A" />
+        <NavItem to="/dashboard" icon={FiHome} label="Dashboard" testId="nav-dashboard" iconColor="#FF3B30" />
         <NavItem to="/news" icon={FiSearch} label="News" testId="nav-news" iconColor="#0A84FF" />
         <NavItem to="/alerts" icon={FiBell} label="Alerts" testId="nav-alerts" iconColor="#FFB020" />
         <NavItem to="/settings" icon={FiSettings} label="Settings" testId="nav-settings" iconColor="#6B7280" />
