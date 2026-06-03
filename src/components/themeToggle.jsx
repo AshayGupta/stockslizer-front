@@ -1,17 +1,37 @@
 import { useTheme } from "@/contexts/ThemeContext";
 import { FiMoon, FiSun } from "react-icons/fi";
+import styled from "styled-components";
+
+const ThemeToggleButton = styled.button`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: var(--transition);
+
+  &:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+  }
+`;
 
 export default function ThemeToggle() {
   const { theme, setTheme } = useTheme();
 
   return (
-    <button
-      onClick={() =>
-        setTheme(theme === "light" ? "dark" : "light")
-      }
-      className="p-2 rounded-lg border border-theme cursor-pointer"
+    <ThemeToggleButton
+      onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+      className="theme-toggle"
+      aria-label="Toggle theme"
     >
       {theme === "light" ? <FiMoon /> : <FiSun />}
-    </button>
+    </ThemeToggleButton>
   );
 }
+

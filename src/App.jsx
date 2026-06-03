@@ -1,5 +1,5 @@
 import "@/App.css";
-import Sidebar from "@/components/Sidebar";
+import Sidebar from "@/components/Sidebar/Sidebar";
 import { SonnerToaster } from "@/components/Toaster";
 import Watchlist from "@/components/Watchlist";
 import News from "@/pages/News/News";
