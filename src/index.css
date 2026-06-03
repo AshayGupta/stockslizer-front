@@ -1,79 +1,274 @@
-@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
 @import "tailwindcss";
 
+/* =====================================================
+   FONT SYSTEM
+===================================================== */
+
 :root {
-  --background: 0 0% 100%;
-  --foreground: 220 20% 15%;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-display: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
 
-  --card: 0 0% 100%;
-  --card-foreground: 220 20% 15%;
+  --radius-xs: 6px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
 
-  --popover: 0 0% 100%;
-  --popover-foreground: 220 20% 15%;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.06);
+  --shadow-md: 0 4px 12px rgba(0,0,0,.08);
+  --shadow-lg: 0 12px 30px rgba(0,0,0,.12);
 
-  --primary: 186 100% 35%;      /* Teal */
-  --primary-foreground: 0 0% 100%;
-
-  --secondary: 210 100% 96%;    /* Light Blue */
-  --secondary-foreground: 220 20% 15%;
-
-  --accent: 142 60% 95%;        /* Light Green */
-  --accent-foreground: 220 20% 15%;
-
-  --muted: 0 0% 93%;            /* #eee */
-  --muted-foreground: 220 10% 45%;
-
-  --border: 0 0% 80%;           /* #ccc */
-  --input: 0 0% 91%;            /* #e9e9e9 */
-
-  --ring: 186 100% 35%;
-  --radius: 0.5rem;
+  --transition: all .2s ease;
 }
+
+/* =====================================================
+   LIGHT THEME
+===================================================== */
+
+.light {
+  --bg-app: #f8fafc;
+  --bg-sidebar: #ffffff;
+  --bg-card: #ffffff;
+  --bg-hover: #f1f5f9;
+  --bg-active: #eef4ff;
+
+  --border: #e5e7eb;
+  --border-light: #f3f4f6;
+
+  --text-primary: #111827;
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
+
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+
+  --success: #16a34a;
+  --danger: #dc2626;
+  --warning: #f59e0b;
+
+  --icon: #64748b;
+  --icon-active: #2563eb;
+
+  --tab-active: #2563eb;
+
+  --watchlist-active-bg: #eef4ff;
+  --watchlist-active-border: #60a5fa;
+}
+
+/* =====================================================
+   DARK THEME
+===================================================== */
+
+.dark {
+  --bg-app: #090a0c;
+  --bg-sidebar: #0f172a;
+  --bg-card: #121826;
+  --bg-hover: #1b2433;
+  --bg-active: #1f2937;
+
+  --border: #243041;
+  --border-light: #1e293b;
+
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+
+  --primary: #22d3ee;
+  --primary-hover: #06b6d4;
+
+  --success: #22c55e;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+
+  --icon: #94a3b8;
+  --icon-active: #22d3ee;
+
+  --tab-active: #22d3ee;
+
+  --watchlist-active-bg: rgba(34,211,238,.12);
+  --watchlist-active-border: #22d3ee;
+}
+
+/* =====================================================
+   GLOBAL
+===================================================== */
 
 html,
 body,
 #root {
-  min-height: 100vh;
-  background-color: white;
-  color: rgb(30 41 59);
-  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: var(--bg-app);
+  color: var(--text-primary);
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
 }
 
 body {
-  background-image:
-    linear-gradient(rgba(204,204,204,0.3) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(204,204,204,0.3) 1px, transparent 1px);
-
-  background-size: 64px 64px;
-  background-attachment: fixed;
+  font-size: 14px;
 }
 
-.font-display {
-  font-family: 'Chivo', sans-serif;
+* {
+  box-sizing: border-box;
+}
+
+/* =====================================================
+   TYPOGRAPHY
+===================================================== */
+
+.text-title {
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.text-section {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.text-card-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.text-body {
+  font-size: 14px;
+}
+
+.text-small {
+  font-size: 12px;
+}
+
+.text-muted {
+  color: var(--text-secondary);
 }
 
 .font-mono {
-  font-family: 'JetBrains Mono', monospace;
-  font-feature-settings: "tnum" 1, "calt" 0;
+  font-family: var(--font-mono);
 }
 
-/* Scrollbar */
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.sidebar {
+  background: var(--bg-sidebar);
+  border-right: 1px solid var(--border);
+}
+
+.sidebar-item {
+  color: var(--text-secondary);
+  transition: var(--transition);
+}
+
+.sidebar-item:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.sidebar-item.active {
+  background: var(--watchlist-active-bg);
+  color: var(--primary);
+}
+
+/* =====================================================
+   CARDS
+===================================================== */
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+}
+
+.btn-outline {
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-primary);
+}
+
+/* =====================================================
+   INPUTS
+===================================================== */
+
+.input {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+}
+
+.input:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+/* =====================================================
+   STATUS
+===================================================== */
+
+.text-success {
+  color: var(--success);
+}
+
+.text-danger {
+  color: var(--danger);
+}
+
+.text-warning {
+  color: var(--warning);
+}
+
+/* =====================================================
+   ICONS
+===================================================== */
+
+.icon {
+  color: var(--icon);
+}
+
+.icon-active {
+  color: var(--icon-active);
+}
+
+/* =====================================================
+   SCROLLBAR
+===================================================== */
 
 ::-webkit-scrollbar {
   width: 8px;
-  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f8fafc;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: var(--border);
   border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: var(--text-muted);
 }
