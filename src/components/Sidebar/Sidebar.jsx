@@ -1,4 +1,4 @@
-import { FiBarChart2, FiBell, FiHome, FiSearch, FiSettings } from "react-icons/fi";
+import { FiBarChart2, FiBell, FiFileText, FiGrid, FiHome, FiSearch, FiSettings } from "react-icons/fi";
 import { Link, useLocation } from "react-router-dom";
 import ThemeToggle from "../themeToggle";
 import "./Sidebar.scss";
@@ -34,8 +34,8 @@ const Sidebar = () => {
 
       <nav className="sidebar-nav">
         <div className="sidebar-section-label">Navigate</div>
-        <NavItem to="/dashboard" icon={FiHome} label="Dashboard" testId="nav-dashboard" iconColor="#FF3B30" />
-        <NavItem to="/news" icon={FiSearch} label="News" testId="nav-news" iconColor="#0A84FF" />
+        <NavItem to="/dashboard" icon={FiGrid} label="Dashboard" testId="nav-dashboard" iconColor="#FF3B30" />
+        <NavItem to="/news" icon={FiFileText} label="News" testId="nav-news" iconColor="#0A84FF" />
         <NavItem to="/alerts" icon={FiBell} label="Alerts" testId="nav-alerts" iconColor="#FFB020" />
         <NavItem to="/settings" icon={FiSettings} label="Settings" testId="nav-settings" iconColor="#6B7280" />
       </nav>

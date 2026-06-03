@@ -31,10 +31,10 @@
 
 .light {
   --bg-app: #f8fafc;
-  --bg-sidebar: #ffffff;
+  --bg-sidebar: #fafbfc;
   --bg-card: #ffffff;
-  --bg-hover: #f1f5f9;
-  --bg-active: #eef4ff;
+  --bg-hover: #e8edf3;
+  --active-bg: #eef4ff;
 
   --border: #e5e7eb;
   --border-light: #f3f4f6;
@@ -55,7 +55,6 @@
 
   --tab-active: #2563eb;
 
-  --active-bg: #eef4ff;
   ---active-border: #60a5fa;
 }
 
@@ -67,7 +66,7 @@
   --bg-app: #090a0c;
   --bg-sidebar: #0f172a;
   --bg-card: #121826;
-  --bg-hover: #1b2433;
+  --bg-hover: #253142;
   --bg-active: #1f2937;
 
   --border: #243041;
