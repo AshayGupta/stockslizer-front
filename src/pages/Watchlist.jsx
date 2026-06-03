@@ -29,7 +29,7 @@ const Watchlist = () => {
   const filtered = useMemo(() => {
     if (!searchQ.trim()) return list;
     const s = searchQ.trim().toLowerCase();
-    return list.filter((it) => it.symbol.toLowerCase().includes(s) || (it.name && it.name.toLowerCase().includes(s)));
+    return list.filter((stock) => stock.symbol.toLowerCase().includes(s) || (stock.name && stock.name.toLowerCase().includes(s)));
   }, [searchQ, list]);
 
   const onAdded = () => {
@@ -66,17 +66,17 @@ const Watchlist = () => {
       </div>
 
       <ul className="flex-1 overflow-y-auto">
-        {filtered.map((it) => (
-          <li key={it.symbol}>
+        {filtered.map((stock) => (
+          <li key={stock.symbol}>
             <a
               href="#"
               onClick={(e) => e.preventDefault()}
-              className="flex items-center justify-between gap-3 px-3 py-2 hover:bg-[#FFF8E1] rounded-md transition-colors"
-              data-testid={`watchlist-item-${it.symbol}`}
+              className="flex items-center justify-between gap-3 px-3 py-1 hover:bg-[#e9e9e9] hover:text-[#0A84FF] transition-colors border border-transparent"
+              data-testid={`watchlist-item-${stock.symbol}`}
             >
               <div className="min-w-0">
-                <div className="font-mono text-sm font-semibold text-[#111827]">{it.symbol.replace(/\.(NS|BO)$/, "")}</div>
-                <div className="text-xs text-[#6B7280] truncate">{it.name}</div>
+                <div className="font-mono text-sm font-semibold text-[#111827]">{stock.symbol.replace(/\.(NS|BO)$/, "")}</div>
+                <div className="text-xs text-[#6B7280] truncate">{stock.name}</div>
               </div>
               <div className="text-xs font-mono text-[#5C6577]">NSE</div>
             </a>
