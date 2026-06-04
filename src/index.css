@@ -31,7 +31,7 @@
 ===================================================== */
 
 .light {
-  --bg-app: #f8fafc;
+  --bg-body: #f8fafc;
   --bg-sidebar: #fafbfc;
   --bg-card: #ffffff;
   --bg-hover: #e8edf3;
@@ -60,6 +60,9 @@
 
   --seperator: #f1f5f9;
 
+  --default-shadow:
+  0 1px 2px rgba(0, 0, 0, 0.04),
+  0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 /* =====================================================
@@ -67,7 +70,7 @@
 ===================================================== */
 
 .dark {
-  --bg-app: #090a0c;
+  --bg-body: #090a0c;
   --bg-sidebar: #0f172a;
   --bg-card: #121826;
   --bg-hover: #253142;
@@ -93,6 +96,10 @@
   --tab-active: #22d3ee;
 
   --active-border: #22d3ee;
+
+  --default-shadow:
+  0 1px 2px rgba(0, 0, 0, 0.25),
+  0 8px 24px rgba(0, 0, 0, 0.35);
 }
 
 /* =====================================================
@@ -105,7 +112,7 @@ body,
   margin: 0;
   padding: 0;
   height: 100%;
-  background: var(--bg-app);
+  background: var(--bg-body);
   color: var(--text-primary);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;

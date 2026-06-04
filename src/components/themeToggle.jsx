@@ -1,5 +1,5 @@
+import { Icons } from "@/common/icons";
 import { useTheme } from "@/contexts/ThemeContext";
-import { FiMoon, FiSun } from "react-icons/fi";
 import styled from "styled-components";
 
 const ThemeToggleButton = styled.button`
@@ -30,7 +30,7 @@ export default function ThemeToggle() {
       className="theme-toggle"
       aria-label="Toggle theme"
     >
-      {theme === "light" ? <FiMoon /> : <FiSun />}
+      {theme === "light" ? <Icons.MoonIcon size={18} /> : <Icons.SunIcon size={18} />}
     </ThemeToggleButton>
   );
 }

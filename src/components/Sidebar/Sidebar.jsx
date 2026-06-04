@@ -1,7 +1,7 @@
-import { FiBarChart2, FiBell, FiFileText, FiGrid, FiHome, FiSearch, FiSettings } from "react-icons/fi";
 import { Link, useLocation } from "react-router-dom";
 import ThemeToggle from "../themeToggle";
 import "./Sidebar.scss";
+import { Icons } from "@/common/icons";
 
 const NavItem = ({ to, icon: Icon, label, testId, iconColor }) => {
   const loc = useLocation();
@@ -24,7 +24,7 @@ const Sidebar = () => {
     <aside className="sidebar w-50 shrink-0 h-screen flex flex-col shadow-md">
       <div className="sidebar-header shadow-sm">
         <div className="w-8 h-8 sidebar-brand-icon">
-          <FiBarChart2 size={18} className="text-white" />
+          <Icons.ChartColumnIcon size={18} className="text-white" />
         </div>
         <div>
           <div className="sidebar-brand-title">STOCKSLIZER</div>
@@ -34,10 +34,10 @@ const Sidebar = () => {
 
       <nav className="sidebar-nav shadow-sm">
         <div className="sidebar-section-label">Navigate</div>
-        <NavItem to="/dashboard" icon={FiGrid} label="Dashboard" testId="nav-dashboard" iconColor="#FF3B30" />
-        <NavItem to="/news" icon={FiFileText} label="News" testId="nav-news" iconColor="#0A84FF" />
-        <NavItem to="/alerts" icon={FiBell} label="Alerts" testId="nav-alerts" iconColor="#FFB020" />
-        <NavItem to="/settings" icon={FiSettings} label="Settings" testId="nav-settings" iconColor="#6B7280" />
+        <NavItem to="/dashboard" icon={Icons.LayoutGridIcon} label="Dashboard" testId="nav-dashboard" iconColor="#FF3B30" />
+        <NavItem to="/news" icon={Icons.FileTextIcon} label="News" testId="nav-news" iconColor="#0A84FF" />
+        <NavItem to="/alerts" icon={Icons.BellIcon} label="Alerts" testId="nav-alerts" iconColor="#FFB020" />
+        <NavItem to="/settings" icon={Icons.SettingsIcon} label="Settings" testId="nav-settings" iconColor="#6B7280" />
       </nav>
 
       <div className="sidebar-footer">

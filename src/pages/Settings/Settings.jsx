@@ -1,4 +1,4 @@
-import { FiInfo } from "react-icons/fi";
+import { Icons } from "@/common/icons";
 
 const Settings = () => {
   return (
@@ -10,7 +10,7 @@ const Settings = () => {
 
       <div className="bg-[#fff] border border-[#e9e9e9] rounded-md p-5 max-w-2xl space-y-4 text-[#111827]">
         <div className="flex items-start gap-3">
-          <FiInfo size={20} className="text-[#0A84FF] mt-0.5" />
+          <Icons.InfoIcon size={20} className="text-[#0A84FF] mt-0.5" />
           <div>
             <div className="font-semibold text-[#111827]">Data Sources</div>
             <div className="text-sm text-[#6B7280] mt-1">

@@ -1,6 +1,5 @@
 import { Loader } from "@/components/Loader";
 import { useEffect, useState } from "react";
-import { BsNewspaper } from "react-icons/bs";
 
 const News = () => {
   const [news, setNews] = useState([]);

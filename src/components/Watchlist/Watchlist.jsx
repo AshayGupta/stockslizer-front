@@ -1,6 +1,5 @@
+import { Icons } from "@/common/icons";
 import { useMemo, useState } from "react";
-import { FiChevronDown, FiSearch, FiSliders } from "react-icons/fi";
-import { MdDelete } from "react-icons/md";
 import { SwipeableList, SwipeableListItem, TrailingActions, Type } from "react-swipeable-list";
 import "react-swipeable-list/dist/styles.css";
 import styled from "styled-components";
@@ -84,35 +83,12 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-  background: var(--bg-app);
-  color: var(--text-primary);
-`;
-
-const Header = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.5rem;
-  border-bottom: 1px solid var(--border);
   background: var(--bg-card);
-`;
-
-const HeaderTitle = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 1.25rem;
-  font-weight: 600;
   color: var(--text-primary);
-
-  svg {
-    cursor: pointer;
-    transition: transform 0.2s;
-
-    &:hover {
-      transform: rotate(180deg);
-    }
-  }
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  box-shadow: var(--default-shadow);
+  overflow: hidden;
 `;
 
 const SearchBar = styled.div`
@@ -120,7 +96,6 @@ const SearchBar = styled.div`
   align-items: center;
   gap: 0.75rem;
   padding: 1rem 1.5rem;
-  background: var(--bg-card);
   border-bottom: 1px solid var(--border);
 
   input {
@@ -280,7 +255,7 @@ const Watchlist = () => {
 
   const filtered = useMemo(() => {
     if (!searchQ.trim()) return list;
-    
+
     const s = searchQ.trim().toLowerCase();
     return list.filter((stock) =>
       stock.symbol.toLowerCase().includes(s) ||
@@ -304,7 +279,7 @@ const Watchlist = () => {
         }}
       >
         <DeleteButton onClick={() => handleDelete(symbol)}>
-          <MdDelete /> Delete
+          <Icons.DeleteIcon /> Delete
         </DeleteButton>
       </div>
     </TrailingActions>
@@ -312,22 +287,15 @@ const Watchlist = () => {
 
   return (
     <Container>
-      <Header>
-        <HeaderTitle>
-          My Watchlist <FiChevronDown size={20} />
-        </HeaderTitle>
-        <FiSliders size={20} style={{ cursor: "pointer" }} />
-      </Header>
-
       <SearchBar>
-        <FiSearch size={16} color="var(--text-muted)" />
+        {/* <FiSearch size={16} color="var(--text-muted)" /> */}
         <input
           value={searchQ}
           onChange={(e) => setSearchQ(e.target.value)}
-          placeholder="Search stocks..."
+          placeholder="Search Stocks..."
           data-testid="watchlist-search"
         />
-        <FiSliders size={16} color="var(--text-muted)" />
+        <Icons.SlidersHorizontalIcon size={16} color="var(--text-muted)" />
       </SearchBar>
 
       <TableHeader>

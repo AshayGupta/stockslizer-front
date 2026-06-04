@@ -2,7 +2,6 @@
 // import { Input } from "@/components/ui/input";
 // import { api, cleanSym } from "@/lib/api";
 // import { useEffect, useState } from "react";
-// import { FiSearch } from "react-icons/fi";
 // import { toast } from "sonner";
 
 // const POPULAR = [
