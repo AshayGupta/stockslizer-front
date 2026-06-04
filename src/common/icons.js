@@ -9,6 +9,7 @@ import {
   Sun,
   SlidersHorizontal,
   Trash2,
+  CirclePlus ,
 } from "lucide-react";
 
 export const Icons = {
@@ -22,4 +23,5 @@ export const Icons = {
   SunIcon: Sun,
   SlidersHorizontalIcon: SlidersHorizontal,
   DeleteIcon: Trash2,
+  CirclePlusIcon: CirclePlus,
 }

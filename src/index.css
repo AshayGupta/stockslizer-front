@@ -21,9 +21,14 @@
 
   --transition: all .2s ease;
 
-  --default-font-size: 0.725rem;
-  --default-font-weight: 500;
-  
+  --font-size-xs: 0.625rem;
+  --font-size-sm: 0.75rem;
+  --font-size-md: 0.875rem;
+  --font-size-lg: 1rem;
+  --font-size-xl: 1.25rem;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 600;
 }
 
 /* =====================================================
@@ -49,6 +54,7 @@
 
   --success: #16a34a;
   --danger: #dc2626;
+  --danger-hover: #b91c1c;
   --warning: #f59e0b;
 
   --icon: #64748b;
@@ -119,7 +125,7 @@ body,
 }
 
 body {
-  font-size: var(--default-font-size);
+  font-size: var(--font-size-sm);
 }
 
 * {
@@ -245,7 +251,7 @@ body {
 ===================================================== */
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 4px;
 }
 
 ::-webkit-scrollbar-track {
@@ -259,4 +265,5 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--text-muted);
+  cursor: grab;
 }
