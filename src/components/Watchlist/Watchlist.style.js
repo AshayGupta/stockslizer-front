@@ -60,7 +60,7 @@ export const StockDetails = styled.div`
 `;
 
 export const StockSymbol = styled.div`
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-medium);
   color: var(--text-primary);
   font-size: var(--font-size-md);
 `;
@@ -79,7 +79,7 @@ export const PriceInfo = styled.div`
 `;
 
 export const Price = styled.div`
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-medium);
   font-size: var(--font-size-md);
   color: var(--text-primary);
 `;
