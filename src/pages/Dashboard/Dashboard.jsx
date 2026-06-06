@@ -1,11 +1,12 @@
+import StockDetails from '@/pages/StockDetails/StockDetails';
 import Watchlist from '@/components/Watchlist/Watchlist';
-import React from 'react';
 import "./Dashboard.css";
 
 const Dashboard = () => {
 	return (
-		<div className="p-2 flex-1 h-full overflow-auto">
+		<div className="h-full flex gap-2 p-2 overflow-auto">
             <Watchlist />
+			<StockDetails />
 		</div>
 	);
 };
