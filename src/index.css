@@ -28,7 +28,8 @@
   --font-size-xl: 1.25rem;
   --font-weight-normal: 400;
   --font-weight-medium: 500;
-  --font-weight-bold: 600;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
 
   --DashboardIcon: #FF3B30;
   --BellIcon: #FFB020;
@@ -43,7 +44,6 @@
 .light {
   --bg-body: #f8fafc;
   --bg-card: #ffffff;
-  --bg-hover: #e8edf3;
   --bg-active: #eef4ff;
 
   --border: #e5e7eb;
@@ -52,25 +52,29 @@
   --text-primary: #111827;
   --text-secondary: #64748b;
   --text-muted: #94a3b8;
-
+  --color-text-brand: #0D9488;
+  --text-title-primary: #8B5CF6;
+  
+  
   --primary: #2563eb;
-  --primary-hover: #1d4ed8;
-
+  
   --success: #16a34a;
   --danger: #dc2626;
-  --danger-hover: #b91c1c;
   --warning: #f59e0b;
-
+  
   --icon: #64748b;
-  --icon-active: #2563eb;
-
-  --tab-active: #2563eb;
-
+  
   --active-border: #60a5fa;
 
-  --seperator: #f1f5f9;
-
+  --separator: #f1f5f9;
+  
   --bg-sidebar: #fafbfc;
+  
+  --bg-hover: #e8edf3;
+  --primary-hover: #1d4ed8;
+  --danger-hover: #b91c1c;
+  --text-title-primary-hover: #7C3AED;
+
 
   --default-shadow:
   0 1px 2px rgba(0, 0, 0, 0.04),
@@ -84,43 +88,45 @@
 .dark {
   --bg-body: #090a0c;
   --bg-card: #121826;
-  --bg-hover: #253142;
   --bg-active: rgba(34,211,238,.12);
-
+  
   --border: #243041;
   --border-light: #1e293b;
   
   --text-primary: #f8fafc;
   --text-secondary: #94a3b8;
   --text-muted: #64748b;
-
-  --primary: #22d3ee;
-  --primary-hover: #06b6d4;
-
+  --color-text-brand: #2DD4BF;
+  --text-title-primary: #A78BFA;
+  
+  --primary: #60A5FA;
+  
   --success: #22c55e;
   --danger: #ef4444;
-  --danger-hover: #b91c1c;
   --warning: #f59e0b;
-
-  --icon: #94a3b8;
-  --icon-active: #22d3ee;
   
-  --tab-active: #22d3ee;
-
+  --icon: #94a3b8;
+  
   --active-border: #22d3ee;
-
-  --seperator: #f1f5f9;
+  
+  --separator: #f1f5f9;
   
   --bg-sidebar: #0f172a;
+  
+  --bg-hover: #253142;
+  --primary-hover: #93C5FD;
+  --danger-hover: #b91c1c;
+  --text-title-primary-hover: #C4B5FD;
 
+  
   --default-shadow:
   0 1px 2px rgba(0, 0, 0, 0.25),
   0 8px 24px rgba(0, 0, 0, 0.35);
 }
 
 /* =====================================================
-   GLOBAL
-   ===================================================== */
+GLOBAL
+===================================================== */
    
 html,
 body,
@@ -147,9 +153,15 @@ body {
 ===================================================== */
 
 .text-title {
-  font-size: 34px;
-  font-weight: 700;
-  color: var(--text-primary);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-title-primary);
+}
+
+.text-subtitle {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.05rem;
 }
 
 .text-section {
@@ -253,7 +265,7 @@ body {
 }
 
 .icon-active {
-  color: var(--icon-active);
+  color: var(--primary);
 }
 
 /* =====================================================

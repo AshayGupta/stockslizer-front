@@ -26,7 +26,7 @@ export default function StockSectionTabs() {
             key={tab.label}
             className={`flex gap-2 items-center py-4 border-b-2 transition ${
               tab.active
-                ? "border-[var(--tab-active)] text-[var(--tab-active)]"
+                ? "border-[var(--primary)] text-[var(--primary)]"
                 : "border-transparent text-[var(--text-secondary)]"
             }`}
           >

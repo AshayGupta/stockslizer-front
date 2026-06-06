@@ -1,42 +1,45 @@
 import { Icons } from "@/common/icons";
-import "./StockHeader.scss";
+import styles from "./StockHeader.module.scss";
 
 export default function StockHeader() {
   return (
-    <div className="p-6 border-b border-[var(--border)]">
+    <div className="mt-2 mx-3 pb-1 border-b border-[var(--separator)]">
       <div className="flex justify-between">
-        <div className="flex gap-4">
-          <img
-            src="https://logo.clearbit.com/reliance.com"
-            alt=""
-            className="w-14 h-14 rounded-full"
-          />
+        <div>
+          <div className="flex gap-4">
+            <img
+              src="https://www.ril.com/news-media/resource-center/media-kit/reliance-industries-limited"
+              alt=""
+              className="w-10 h-10 rounded-full"
+            />
 
-          <div>
-            <h1 className="text-[28px] font-semibold">
-              Reliance Industries Ltd.
-            </h1>
-
-            <div className="text-muted text-small mt-1">
-              RELIANCE • NSE
+            <div>
+              <h1 className="text-title">
+                Reliance Industries Ltd.
+              </h1>
+              <div className="text-subtitle text-muted">
+                RELIANCE • NSE
+              </div>
             </div>
+          </div>
 
-            <div className="flex gap-3 mt-3">
-              <div className="text-[34px] font-bold">
-                ₹2,912.40
-              </div>
-
-              <div className="text-success text-[22px] font-semibold">
-                +35.90 (+1.25%)
-              </div>
+          <div className="flex gap-3 mt-2 ml-14">
+            <div className="text-xs font-medium">
+              ₹2,912.40
+            </div>
+            <div className="text-xs font-medium text-[var(--success)]">
+              +35.90 (+1.25%)
+            </div>
+            <div className="text-[10px] text-muted">
+              As on 20 May 2024, 03:30 PM IST
             </div>
           </div>
         </div>
 
         <div>
-          <button className="alert-btn">
+          <button className={`${styles["alert-btn"]} rounded-full`}>
             <Icons.BellIcon size={16} fill="var(--BellIcon)" />
-            <span className="alert-text">Add Alert</span>
+            <span className={styles["alert-text"]}>Add Alert</span>
           </button>
         </div>
       </div>
