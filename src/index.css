@@ -29,6 +29,11 @@
   --font-weight-normal: 400;
   --font-weight-medium: 500;
   --font-weight-bold: 600;
+
+  --DashboardIcon: #FF3B30;
+  --BellIcon: #FFB020;
+  --NewsIcon: #0A84FF;
+  --SettingsIcon: #6B7280;
 }
 
 /* =====================================================
@@ -37,7 +42,6 @@
 
 .light {
   --bg-body: #f8fafc;
-  --bg-sidebar: #fafbfc;
   --bg-card: #ffffff;
   --bg-hover: #e8edf3;
   --bg-active: #eef4ff;
@@ -62,9 +66,11 @@
 
   --tab-active: #2563eb;
 
-  ---active-border: #60a5fa;
+  --active-border: #60a5fa;
 
   --seperator: #f1f5f9;
+
+  --bg-sidebar: #fafbfc;
 
   --default-shadow:
   0 1px 2px rgba(0, 0, 0, 0.04),
@@ -77,14 +83,13 @@
 
 .dark {
   --bg-body: #090a0c;
-  --bg-sidebar: #0f172a;
   --bg-card: #121826;
   --bg-hover: #253142;
   --bg-active: rgba(34,211,238,.12);
 
   --border: #243041;
   --border-light: #1e293b;
-
+  
   --text-primary: #f8fafc;
   --text-secondary: #94a3b8;
   --text-muted: #64748b;
@@ -94,14 +99,19 @@
 
   --success: #22c55e;
   --danger: #ef4444;
+  --danger-hover: #b91c1c;
   --warning: #f59e0b;
 
   --icon: #94a3b8;
   --icon-active: #22d3ee;
-
+  
   --tab-active: #22d3ee;
 
   --active-border: #22d3ee;
+
+  --seperator: #f1f5f9;
+  
+  --bg-sidebar: #0f172a;
 
   --default-shadow:
   0 1px 2px rgba(0, 0, 0, 0.25),
@@ -110,8 +120,8 @@
 
 /* =====================================================
    GLOBAL
-===================================================== */
-
+   ===================================================== */
+   
 html,
 body,
 #root {
@@ -180,7 +190,7 @@ body {
 }
 
 .card:hover {
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-lg);
 }
 
 /* =====================================================

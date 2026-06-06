@@ -1,7 +1,5 @@
-import {
-  Bell,
-  Star,
-} from "lucide-react";
+import { Icons } from "@/common/icons";
+import "./StockHeader.scss";
 
 export default function StockHeader() {
   return (
@@ -35,15 +33,10 @@ export default function StockHeader() {
           </div>
         </div>
 
-        <div className="flex gap-3 h-fit">
-          <button className="btn-outline px-4 py-2 rounded-lg flex gap-2">
-            <Bell size={16} />
-            Add Alert
-          </button>
-
-          <button className="border border-green-500 text-green-600 px-4 py-2 rounded-lg flex gap-2">
-            <Star size={16} fill="currentColor" />
-            In Watchlist
+        <div>
+          <button className="alert-btn">
+            <Icons.BellIcon size={16} fill="var(--BellIcon)" />
+            <span className="alert-text">Add Alert</span>
           </button>
         </div>
       </div>

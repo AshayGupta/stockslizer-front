@@ -1,6 +1,6 @@
 import StockDetails from '@/pages/StockDetails/StockDetails';
 import Watchlist from '@/components/Watchlist/Watchlist';
-import "./Dashboard.css";
+import "./Dashboard.scss";
 
 const Dashboard = () => {
 	return (
