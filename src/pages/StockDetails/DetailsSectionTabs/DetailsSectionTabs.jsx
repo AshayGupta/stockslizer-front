@@ -1,4 +1,5 @@
 import { Icons } from "@/common/icons";
+import { Separator } from "@/components/styledComponents";
 import CorporateActionsGrid from "@/pages/StockDetails/CorporateActionsGrid/CorporateActionsGrid";
 import Overview from "@/pages/StockDetails/Overview/Overview";
 import { useState } from "react";
@@ -8,7 +9,7 @@ const TabsContainer = styled.div`
   display: flex;
   gap: 1.5rem;
   padding: 0 1.5rem;
-  margin-top: 0.5rem;
+  margin: 0.5rem;
 `;
 
 const TabButton = styled.button`
@@ -42,31 +43,34 @@ const tabs = [
   { id: "alerts", label: "Alerts", icon: Icons.BellIcon, iconColor: "#cc9a2f" },
 ];
 
-export default function StockSectionTabs({ onTabSelect }) {
+export default function DetailsSectionTabs({ onTabSelect }) {
   const defaultTab = tabs.find((tab) => tab.active)?.label ?? tabs[0].label;
   const [selectedTab, setSelectedTab] = useState(defaultTab);
 
   return (
-    <TabsContainer>
-      {tabs.map((tab) => {
-        const Icon = tab.icon;
-        const isActive = tab.label === selectedTab;
+    <div>
+      <TabsContainer>
+        {tabs.map((tab) => {
+          const Icon = tab.icon;
+          const isActive = tab.label === selectedTab;
 
-        return (
-          <TabButton
-            key={tab.label}
-            $active={isActive}
-            aria-pressed={isActive}
-            onClick={() => {
-              setSelectedTab(tab.label);
-              onTabSelect(tab.component);
-            }}
-          >
-            <Icon size={16} color={isActive ? 'var(--primary)' : tab.iconColor} />
-            {tab.label}
-          </TabButton>
-        );
-      })}
-    </TabsContainer>
+          return (
+            <TabButton
+              key={tab.label}
+              $active={isActive}
+              aria-pressed={isActive}
+              onClick={() => {
+                setSelectedTab(tab.label);
+                onTabSelect(tab.component);
+              }}
+            >
+              <Icon size={16} color={isActive ? 'var(--primary)' : tab.iconColor} />
+              {tab.label}
+            </TabButton>
+          );
+        })}
+      </TabsContainer>
+      <Separator />
+    </div>
   );
 }

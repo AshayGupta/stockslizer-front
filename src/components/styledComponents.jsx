@@ -46,3 +46,10 @@ export const EmptyRecord = styled.div`
   color: var(--text-secondary);
   text-align: center;
 `;
+
+export const Separator = styled.div`
+  width: 100%;
+  height: 1px;
+  background: var(--separator);
+  flex-shrink: 0;
+`;

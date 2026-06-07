@@ -1,4 +1,5 @@
 import { Container } from "@/components/styledComponents";
+import DetailsSectionTabs from "@/pages/StockDetails/DetailsSectionTabs/DetailsSectionTabs";
 import Overview from "@/pages/StockDetails/Overview/Overview";
 import StockHeader from "@/pages/StockDetails/StockHeader/StockHeader";
 import { useState } from "react";
@@ -13,8 +14,8 @@ export default function StockDetailsPage() {
         companyName="Apple Inc."
         price={150.0}
         change={2.5}
-        onTabSelect={setTabSelectedComponent}
       />
+      <DetailsSectionTabs onTabSelect={setTabSelectedComponent} />
       {tabSelectedComponent}
     </Container>
   );

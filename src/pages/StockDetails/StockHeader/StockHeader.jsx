@@ -1,10 +1,9 @@
 import { Icons } from "@/common/icons";
-import StockSectionTabs from "@/pages/StockDetails/StockSectionTabs/StockSectionTabs";
 import styles from "./StockHeader.module.scss";
 
-export default function StockHeader({onTabSelect}) {
+export default function StockHeader() {
   return (
-    <div className="mt-2 mx-3 pb-2 border-b border-[var(--separator)]">
+    <div className="pt-2 px-3">
       <div className="flex justify-between">
         <div>
           <div className="flex gap-4">
@@ -24,11 +23,11 @@ export default function StockHeader({onTabSelect}) {
             </div>
           </div>
 
-          <div className="flex gap-3 mt-2 ml-14">
-            <div className="text-xs font-medium">
+          <div className="flex gap-3 mt-2 ml-14 items-center">
+            <div className="text-sm font-medium">
               ₹2,912.40
             </div>
-            <div className="text-xs font-medium text-[var(--success)]">
+            <div className="text-sm font-medium text-[var(--success)]">
               +35.90 (+1.25%)
             </div>
             <div className="text-[10px] text-muted">
@@ -44,8 +43,6 @@ export default function StockHeader({onTabSelect}) {
           </button>
         </div>
       </div>
-
-      <StockSectionTabs onTabSelect={onTabSelect} />
     </div>
   );
 }
