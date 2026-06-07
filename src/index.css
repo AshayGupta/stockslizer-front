@@ -18,6 +18,9 @@
   --shadow-sm: 0 1px 2px rgba(0,0,0,.06);
   --shadow-md: 0 4px 12px rgba(0,0,0,.08);
   --shadow-lg: 0 12px 30px rgba(0,0,0,.12);
+  --shadow-default:
+  0 1px 2px rgba(0, 0, 0, 0.04),
+  0 4px 12px rgba(0, 0, 0, 0.06);
 
   --transition: all .2s ease;
 
@@ -67,10 +70,6 @@
   --bg-hover: #f2f6fa;
   --primary-hover: #1d4ed8;
   --danger-hover: #b91c1c;
-
-  --default-shadow:
-  0 1px 2px rgba(0, 0, 0, 0.04),
-  0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 /* =====================================================
@@ -102,11 +101,7 @@
   
   --bg-hover: #253142;
   --primary-hover: #93C5FD;
-  --danger-hover: #b91c1c;
-  
-  --default-shadow:
-  0 1px 2px rgba(0, 0, 0, 0.25),
-  0 8px 24px rgba(0, 0, 0, 0.35);
+  --danger-hover: #b91c1c;  
 }
 
 /* =====================================================

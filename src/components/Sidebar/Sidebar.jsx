@@ -23,11 +23,11 @@ const Sidebar = () => {
   return (
     <aside className="sidebar w-48 shrink-0 h-screen flex flex-col shadow-md">
       <div className="sidebar-header shadow-sm">
-        <div className="w-8 h-8 sidebar-brand-icon">
+        {/* <div className="w-8 h-8 sidebar-brand-icon">
           <Icons.ChartColumnIcon size={18} className="text-white" />
-        </div>
+        </div> */}
         <div>
-          <div className="sidebar-brand-title">STOCKSLIZER</div>
+          <div className="sidebar-brand-title">STOC<span>Ki</span>NEWS</div>
           <div className="sidebar-brand-subtitle">Stay Ahead. Always.</div>
         </div>
       </div>

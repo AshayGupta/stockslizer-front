@@ -30,7 +30,7 @@ export const StockRow = styled.div`
   border-radius: var(--radius-sm);
   cursor: pointer;
   transition: var(--transition);
-  box-shadow: var(--default-shadow);
+  box-shadow: var(--shadow-default);
 
   &:hover {
     background: var(--bg-hover);
