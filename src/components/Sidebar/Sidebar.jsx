@@ -34,7 +34,7 @@ const Sidebar = () => {
 
       <nav className="sidebar-nav shadow-sm">
         <div className="sidebar-section-label">Navigate</div>
-        <NavItem to="/dashboard" icon={Icons.LayoutGridIcon} label="Dashboard" testId="nav-dashboard" iconColor="var(--DashboardIcon)" />
+        <NavItem to="/dashboard" icon={Icons.HouseIcon} label="Dashboard" testId="nav-dashboard" iconColor="var(--DashboardIcon)" />
         <NavItem to="/news" icon={Icons.FileTextIcon} label="News" testId="nav-news" iconColor="var(--NewsIcon)" />
         <NavItem to="/alerts" icon={Icons.BellIcon} label="Alerts" testId="nav-alerts" iconColor="var(--BellIcon)" />
         <NavItem to="/settings" icon={Icons.SettingsIcon} label="Settings" testId="nav-settings" iconColor="var(--SettingsIcon)" />

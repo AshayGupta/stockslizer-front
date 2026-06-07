@@ -10,6 +10,10 @@ import {
   SlidersHorizontal,
   Trash2,
   CirclePlus ,
+  BadgeDollarSign,
+  Newspaper,
+  LineChart,
+  House
 } from "lucide-react";
 
 export const Icons = {
@@ -24,4 +28,8 @@ export const Icons = {
   SlidersHorizontalIcon: SlidersHorizontal,
   DeleteIcon: Trash2,
   CirclePlusIcon: CirclePlus,
+  BadgeDollarSignIcon: BadgeDollarSign,
+  NewspaperIcon: Newspaper,
+  LineChartIcon: LineChart,
+  HouseIcon: House
 }

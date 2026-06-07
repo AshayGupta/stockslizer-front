@@ -3,7 +3,7 @@ import styles from "./StockHeader.module.scss";
 
 export default function StockHeader() {
   return (
-    <div className="mt-2 mx-3 pb-1 border-b border-[var(--separator)]">
+    <div className="mt-2 mx-3 pb-2 border-b border-[var(--separator)]">
       <div className="flex justify-between">
         <div>
           <div className="flex gap-4">
