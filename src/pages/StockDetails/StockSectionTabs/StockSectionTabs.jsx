@@ -15,13 +15,14 @@ const TabsContainer = styled.div`
   gap: 1.5rem;
   padding: 0 1.5rem;
   border-bottom: 1px solid var(--border);
+  box-shadow: var(--default-shadow);
 `;
 
 const TabButton = styled.button`
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.25rem 0;
+  padding: 0.5rem 0;
   border: 0;
   border-bottom: 2px solid transparent;
   background: transparent;

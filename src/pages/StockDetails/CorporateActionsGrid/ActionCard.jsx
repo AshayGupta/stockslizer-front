@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { Icons } from "@/common/icons";
 
 export default function ActionCard({
   icon,
@@ -14,10 +14,6 @@ export default function ActionCard({
         <div className="flex gap-2 items-center">
           <Icon size={18} />
           <h3 className="text-card-title">{title}</h3>
-        </div>
-
-        <div className="px-3 py-1 rounded-full bg-green-100 text-green-600 text-small">
-          {badge}
         </div>
       </div>
 
@@ -38,7 +34,7 @@ export default function ActionCard({
       <div className="flex justify-end mt-6">
         <button className="flex gap-2 items-center text-[var(--primary)]">
           View Details
-          <ArrowRight size={14} />
+          <Icons.ArrowRightIcon size={14} />
         </button>
       </div>
     </div>

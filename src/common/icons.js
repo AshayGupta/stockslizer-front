@@ -13,7 +13,8 @@ import {
   BadgeDollarSign,
   Newspaper,
   LineChart,
-  House
+  House,
+  ArrowRight
 } from "lucide-react";
 
 export const Icons = {
@@ -31,5 +32,6 @@ export const Icons = {
   BadgeDollarSignIcon: BadgeDollarSign,
   NewspaperIcon: Newspaper,
   LineChartIcon: LineChart,
-  HouseIcon: House
+  HouseIcon: House,
+  ArrowRightIcon: ArrowRight
 }
