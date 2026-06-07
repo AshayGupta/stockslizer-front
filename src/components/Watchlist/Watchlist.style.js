@@ -88,7 +88,7 @@ export const PriceChange = styled.div`
   text-align: right;
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
-  color: ${(props) => (props.isPositive ? "var(--success)" : "var(--danger)")};
+  color: ${({$isPositive}) => $isPositive ? "var(--success)" : "var(--danger)" };
 `;
 
 export const DeleteButton = styled.button`

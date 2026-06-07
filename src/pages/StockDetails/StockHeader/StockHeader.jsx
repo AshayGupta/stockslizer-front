@@ -2,7 +2,7 @@ import { Icons } from "@/common/icons";
 import StockSectionTabs from "@/pages/StockDetails/StockSectionTabs/StockSectionTabs";
 import styles from "./StockHeader.module.scss";
 
-export default function StockHeader() {
+export default function StockHeader({onTabSelect}) {
   return (
     <div className="mt-2 mx-3 pb-2 border-b border-[var(--separator)]">
       <div className="flex justify-between">
@@ -44,7 +44,8 @@ export default function StockHeader() {
           </button>
         </div>
       </div>
-      <StockSectionTabs />
+
+      <StockSectionTabs onTabSelect={onTabSelect} />
     </div>
   );
 }

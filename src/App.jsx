@@ -1,11 +1,10 @@
 import "@/App.css";
 import Sidebar from "@/components/Sidebar/Sidebar";
 import { SonnerToaster } from "@/components/Toaster";
-import Watchlist from "@/components/Watchlist/Watchlist";
 import Dashboard from "@/pages/Dashboard/Dashboard";
 import News from "@/pages/News/News";
 import Settings from "@/pages/Settings/Settings";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
@@ -20,6 +19,7 @@ function App() {
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/news" element={<News />} />
                 <Route path="/settings" element={<Settings />} />
+                <Route path="*" element={<Navigate to="/dashboard" replace />} />
               </Routes>
             </main>
           </div>

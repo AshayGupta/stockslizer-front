@@ -154,7 +154,7 @@ const Watchlist = () => {
                   </StockInfo>
                   <PriceInfo>
                     <Price>₹{stock.price.toFixed(2)}</Price>
-                    <PriceChange isPositive={stock.change >= 0}>
+                    <PriceChange $isPositive={stock.change >= 0}>
                       <span>
                         {`${stock.change > 0 ? "+" : ""}${stock.change.toFixed(2)} `}
                       </span>

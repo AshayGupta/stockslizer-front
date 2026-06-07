@@ -1,8 +1,11 @@
 import { Container } from "@/components/styledComponents";
-import CorporateActions from "@/pages/StockDetails/CorporateActionsGrid/CorporateActionsGrid";
+import Overview from "@/pages/StockDetails/Overview/Overview";
 import StockHeader from "@/pages/StockDetails/StockHeader/StockHeader";
+import { useState } from "react";
 
 export default function StockDetailsPage() {
+  const [tabSelectedComponent, setTabSelectedComponent] = useState(<Overview/>);
+
   return (
     <Container className="flex-auto">
       <StockHeader
@@ -10,8 +13,9 @@ export default function StockDetailsPage() {
         companyName="Apple Inc."
         price={150.0}
         change={2.5}
+        onTabSelect={setTabSelectedComponent}
       />
-      <CorporateActions />
+      {tabSelectedComponent}
     </Container>
   );
 }

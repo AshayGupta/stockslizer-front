@@ -1,13 +1,15 @@
 import { Icons } from "@/common/icons";
+import CorporateActionsGrid from "@/pages/StockDetails/CorporateActionsGrid/CorporateActionsGrid";
+import Overview from "@/pages/StockDetails/Overview/Overview";
 import { useState } from "react";
 import styled from "styled-components";
 
 const tabs = [
-  { icon: Icons.LayoutGridIcon, label: "Overview", iconColor: "#e65100" },
-  { icon: Icons.BadgeDollarSignIcon, label: "Corporate Actions", iconColor: "#135ea9" },
-  { icon: Icons.NewspaperIcon, label: "News", iconColor: "#96187d" },
-  { icon: Icons.LineChartIcon, label: "Financials", iconColor: "#054a0d" },
-  { icon: Icons.BellIcon, label: "Alerts", iconColor: "#cc9a2f" },
+  { id: "overview", label: "Overview", icon: Icons.LayoutGridIcon, iconColor: "#e65100", component: <Overview /> },
+  { id: "corpAction", label: "Corporate Actions", icon: Icons.BadgeDollarSignIcon, iconColor: "#135ea9", component: <CorporateActionsGrid /> },
+  { id: "news", label: "News", icon: Icons.NewspaperIcon, iconColor: "#96187d" },
+  { id: "financials", label: "Financials", icon: Icons.LineChartIcon, iconColor: "#058a15" },
+  { id: "alerts", label: "Alerts", icon: Icons.BellIcon, iconColor: "#cc9a2f" },
 ];
 
 const TabsContainer = styled.div`
@@ -33,8 +35,8 @@ const TabButton = styled.button`
     outline: none;
   }
 
-  ${(props) =>
-    props.active && `
+  ${({$active}) =>
+    $active && `
     color: var(--primary);
     border-bottom-color: var(--primary);
   `}
@@ -53,11 +55,11 @@ export default function StockSectionTabs({ onTabSelect }) {
         return (
           <TabButton
             key={tab.label}
-            active={isActive}
+            $active={isActive}
             aria-pressed={isActive}
             onClick={() => {
               setSelectedTab(tab.label);
-              onTabSelect?.(tab.label);
+              onTabSelect(tab.component);
             }}
           >
             <Icon size={16} color={isActive ? 'var(--primary)' : tab.iconColor} />
