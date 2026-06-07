@@ -46,6 +46,7 @@
   --bg-card: #ffffff;
   --bg-active: #eef4ff;
   --bg-sidebar: #fafbfc;
+  --bg-icon: #e8edf3;
   
   --text-primary: #111827;
   --text-secondary: #64748b;
@@ -83,6 +84,8 @@
   --bg-card: #121826;
   --bg-active: rgba(34,211,238,.12);
   --bg-sidebar: #0f172a;
+  --bg-icon: #2d3a4d;
+
   
   --text-primary: #f8fafc;
   --text-secondary: #94a3b8;
@@ -259,6 +262,10 @@ body {
 
 .icon-active {
   color: var(--primary);
+}
+
+.bg-icon {
+  background-color: var(--bg-icon);
 }
 
 /* =====================================================

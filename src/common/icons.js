@@ -19,7 +19,8 @@ import {
   Gift,
   Gem,
   Split,
-  CalendarDays
+  CalendarDays,
+  Presentation,
 } from "lucide-react";
 
 export const Icons = {
@@ -43,5 +44,6 @@ export const Icons = {
   BuybackIcon: RefreshCw,
   BonusIcon: Gem,
   SplitIcon: Split,
-  CalendarDaysIcon: CalendarDays
+  CalendarDaysIcon: CalendarDays,
+  PresentationIcon: Presentation
 }

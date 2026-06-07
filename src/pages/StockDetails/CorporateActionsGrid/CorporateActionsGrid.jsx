@@ -79,29 +79,19 @@ export default function CorporateActionsGrid() {
       <ActionsList />
 
       <div className="card">
-        <div className="flex justify-between">
-          <h3 className="text-card-title">
-            Announcements / Board Meetings
-          </h3>
-
-          <button className="text-[var(--primary)]">
-            View All
-          </button>
+        <div className="flex gap-3 mb-2 items-center">
+          <Icons.PresentationIcon size={18} color="#e19d36" />
+          <h3 className="text-card-title" style={{color: "#e19d36"}}>Announcements / Board Meetings</h3>
         </div>
 
-        <div className="mt-4 space-y-4">
+        <div className="space-y-3">
           {[1, 2, 3].map((n) => (
             <div key={n} className="flex gap-3">
-              <div className="w-14 h-14 rounded bg-slate-200" />
+              <div className="w-10 h-10 rounded bg-icon" />
 
-              <div>
-                <div className="font-medium">
-                  Reliance Q4 Results...
-                </div>
-
-                <div className="text-small text-muted">
-                  Economic Times • 20 May 2024
-                </div>
+              <div className="flex flex-col">
+                <span className="font-medium">Reliance Q4 Results...</span>
+                <span className="text-small text-muted">Economic Times • 20 May 2024</span>
               </div>
             </div>
           ))}
