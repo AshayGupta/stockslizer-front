@@ -140,7 +140,7 @@ body {
 ===================================================== */
 
 .text-title {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-xl);
   font-weight: var(--font-weight-semibold);
   color: var(--text-title-primary);
 }

@@ -21,7 +21,7 @@ const TabButton = styled.button`
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.5rem 0;
+  padding: 0.25rem 0;
   border: 0;
   border-bottom: 2px solid transparent;
   background: transparent;
