@@ -4,12 +4,12 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
+  overflow: hidden;
   background: var(--bg-card);
   color: var(--text-primary);
-  border-radius: var(--radius-sm);
   border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
   box-shadow: var(--default-shadow);
-  overflow: hidden;
 `;
 
 export const SearchBar = styled.div`
@@ -52,4 +52,10 @@ export const Separator = styled.div`
   height: 1px;
   background: var(--separator);
   flex-shrink: 0;
+`;
+
+export const ScrollableContent = styled.div`
+  flex: 1;
+  overflow-y: auto;
+  padding: 0.5rem;
 `;
