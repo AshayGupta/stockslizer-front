@@ -1,33 +1,70 @@
 import { Icons } from "@/common/icons";
+import { useState } from "react";
+import styled from "styled-components";
 
 const tabs = [
   { icon: Icons.LayoutGridIcon, label: "Overview", iconColor: "#e65100" },
-  { icon: Icons.BadgeDollarSignIcon, label: "Corporate Actions", iconColor: "#135ea9", active: true },
+  { icon: Icons.BadgeDollarSignIcon, label: "Corporate Actions", iconColor: "#135ea9" },
   { icon: Icons.NewspaperIcon, label: "News", iconColor: "#96187d" },
   { icon: Icons.LineChartIcon, label: "Financials", iconColor: "#054a0d" },
   { icon: Icons.BellIcon, label: "Alerts", iconColor: "#cc9a2f" },
 ];
 
-export default function StockSectionTabs() {
+const TabsContainer = styled.div`
+  display: flex;
+  gap: 1.5rem;
+  padding: 0 1.5rem;
+  border-bottom: 1px solid var(--border);
+`;
+
+const TabButton = styled.button`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color 150ms ease, border-color 150ms ease, background-color 150ms ease;
+
+  &:focus {
+    outline: none;
+  }
+
+  ${(props) =>
+    props.active && `
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+  `}
+`;
+
+export default function StockSectionTabs({ onTabSelect }) {
+  const defaultTab = tabs.find((tab) => tab.active)?.label ?? tabs[0].label;
+  const [selectedTab, setSelectedTab] = useState(defaultTab);
+
   return (
-    <div className="flex gap-6 px-6 border-b border-[var(--border)]">
+    <TabsContainer>
       {tabs.map((tab) => {
         const Icon = tab.icon;
+        const isActive = tab.label === selectedTab;
 
         return (
-          <button
+          <TabButton
             key={tab.label}
-            className={`flex gap-2 items-center py-2 border-b-2 transition ${
-              tab.active
-                ? "border-[var(--primary)] text-[var(--primary)]"
-                : "border-transparent text-[var(--text-secondary)]"
-            }`}
+            active={isActive}
+            aria-pressed={isActive}
+            onClick={() => {
+              setSelectedTab(tab.label);
+              onTabSelect?.(tab.label);
+            }}
           >
-            <Icon size={16} color={tab.iconColor}/>
+            <Icon size={16} color={isActive ? 'var(--primary)' : tab.iconColor} />
             {tab.label}
-          </button>
+          </TabButton>
         );
       })}
-    </div>
+    </TabsContainer>
   );
 }
