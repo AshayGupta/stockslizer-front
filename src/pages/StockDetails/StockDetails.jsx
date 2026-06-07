@@ -18,7 +18,7 @@ export default function StockDetailsPage() {
   const [tabSelectedComponent, setTabSelectedComponent] = useState(<Overview/>);
 
   return (
-    <PageContainer className="flex-auto gap-3">
+    <PageContainer className="flex-auto gap-2">
       <div className="container-style">
         <StockHeader
           symbol="AAPL"

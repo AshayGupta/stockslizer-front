@@ -111,7 +111,7 @@ const Watchlist = () => {
   );
 
   return (
-    <PageContainer className="container-style w-fit">
+    <PageContainer className="container-style w-fit flex-none">
       <SearchBar>
         <input
           value={searchQ}

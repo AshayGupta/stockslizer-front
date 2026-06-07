@@ -1,0 +1,10 @@
+.about-card {
+    padding: 0.5rem 0.75rem !important;
+    border-radius: var(--radius-sm) !important;
+    gap: 0.25rem !important;
+    cursor: default !important;
+}
+
+.about-card:hover {
+    background: var(--bg-card) !important;
+}
