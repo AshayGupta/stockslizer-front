@@ -13,15 +13,27 @@ const Overview = () => {
 
       <div className="grid grid-cols-3 gap-2">
         <div className="card">
-          <h1>Overview</h1>
+          <h3 className='text-card-title'>Key Metrics</h3>
         </div>
 
         <div className="card">
-          <h1>Overview</h1>
+          <h3 className='text-card-title'>Price Statistics</h3>
         </div>
 
         <div className="card">
-          <h1>Overview</h1>
+          <h3 className='text-card-title'>Shareholding Pattern</h3>
+        </div>
+
+        <div className="card">
+          <h3 className='text-card-title'>Company Information</h3>
+        </div>
+
+        <div className="card">
+          <h3 className='text-card-title'>Financial Highlight</h3>
+        </div>
+
+        <div className="card">
+          <h3 className='text-card-title'>Other Details</h3>
         </div>
       </div>
     </div>

@@ -191,9 +191,7 @@ body {
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
-  padding: 0.75rem;
-  cursor: pointer;;
-}
+  padding: 0.5rem 0.75rem;}
 
 .card:hover {
   box-shadow: var(--shadow-md);
@@ -202,7 +200,7 @@ body {
 
 .text-card-title {
   font-size: var(--font-size-md);
-  font-weight: 600;
+  font-weight: 500;
   color: #7e2fef;
 }
 
