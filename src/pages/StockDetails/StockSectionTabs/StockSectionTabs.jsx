@@ -4,14 +4,6 @@ import Overview from "@/pages/StockDetails/Overview/Overview";
 import { useState } from "react";
 import styled from "styled-components";
 
-const tabs = [
-  { id: "overview", label: "Overview", icon: Icons.LayoutGridIcon, iconColor: "#e65100", component: <Overview /> },
-  { id: "corpAction", label: "Corporate Actions", icon: Icons.BadgeDollarSignIcon, iconColor: "#135ea9", component: <CorporateActionsGrid /> },
-  { id: "news", label: "News", icon: Icons.NewspaperIcon, iconColor: "#96187d" },
-  { id: "financials", label: "Financials", icon: Icons.LineChartIcon, iconColor: "#058a15" },
-  { id: "alerts", label: "Alerts", icon: Icons.BellIcon, iconColor: "#cc9a2f" },
-];
-
 const TabsContainer = styled.div`
   display: flex;
   gap: 1.5rem;
@@ -41,6 +33,14 @@ const TabButton = styled.button`
     border-bottom-color: var(--primary);
   `}
 `;
+
+const tabs = [
+  { id: "overview", label: "Overview", icon: Icons.LayoutGridIcon, iconColor: "#e65100", component: <Overview /> },
+  { id: "corpAction", label: "Corporate Actions", icon: Icons.BadgeDollarSignIcon, iconColor: "#135ea9", component: <CorporateActionsGrid /> },
+  { id: "news", label: "News", icon: Icons.NewspaperIcon, iconColor: "#96187d" },
+  { id: "financials", label: "Financials", icon: Icons.LineChartIcon, iconColor: "#058a15" },
+  { id: "alerts", label: "Alerts", icon: Icons.BellIcon, iconColor: "#cc9a2f" },
+];
 
 export default function StockSectionTabs({ onTabSelect }) {
   const defaultTab = tabs.find((tab) => tab.active)?.label ?? tabs[0].label;
