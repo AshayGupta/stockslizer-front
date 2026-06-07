@@ -1,42 +1,38 @@
 import { Icons } from "@/common/icons";
 
 export default function ActionCard({
-  icon,
   title,
-  badge,
+  type,
+  icon,
+  color,
   fields,
 }) {
   const Icon = icon;
 
   return (
-    <div className="card p-5">
-      <div className="flex justify-between items-center mb-5">
-        <div className="flex gap-2 items-center">
-          <Icon size={18} />
-          <h3 className="text-card-title">{title}</h3>
-        </div>
+    <div className="card">
+      <div className="flex gap-3 mb-2 items-center">
+        <Icon size={18} color={color} />
+        <h3 className="text-card-title" style={{color}}>{title}</h3>
       </div>
 
-      <div className="grid grid-cols-3 gap-5">
-        {fields.map((field) => (
-          <div key={field.label}>
-            <div className="text-small text-muted">
-              {field.label}
-            </div>
-
-            <div className="mt-1 font-medium">
-              {field.value}
-            </div>
+      <div className="flex flex-col gap-2">
+        {fields.map((field, idx) => (
+          <div key={`${type}_${field.value}_${idx}`} className="flex flex-col">
+            { field.label && 
+              <span className="text-small text-muted">{field.label}</span>
+            }
+            <span >{field.value}</span>
           </div>
         ))}
       </div>
 
-      <div className="flex justify-end mt-6">
+      {/* <div className="flex justify-end mt-6">
         <button className="flex gap-2 items-center text-[var(--primary)]">
           View Details
           <Icons.ArrowRightIcon size={14} />
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }

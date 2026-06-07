@@ -21,11 +21,11 @@
 
   --transition: all .2s ease;
 
-  --font-size-xs: 0.625rem;
-  --font-size-sm: 0.75rem;
-  --font-size-md: 0.875rem;
-  --font-size-lg: 1rem;
-  --font-size-xl: 1.25rem;
+  --font-size-xs: 0.625rem;     /*  10px badges/labels Text */
+  --font-size-sm: 0.75rem;      /*  12px Secondary Text */
+  --font-size-md: 0.875rem;     /*  14px Normal Text  */
+  --font-size-lg: 1rem;         /*  16px Card Title Text */
+  --font-size-xl: 1.25rem;      /*  20px Section Header Text */
   --font-weight-normal: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
@@ -64,7 +64,7 @@
   --icon: #64748b;
   --separator: #f1f5f9;
   
-  --bg-hover: #e8edf3;
+  --bg-hover: #f2f6fa;
   --primary-hover: #1d4ed8;
   --danger-hover: #b91c1c;
   --text-title-primary-hover: #7C3AED;
@@ -157,7 +157,7 @@ body {
 }
 
 .text-card-title {
-  font-size: 18px;
+  font-size: var(--font-size-md);
   font-weight: 600;
 }
 
@@ -166,7 +166,7 @@ body {
 }
 
 .text-small {
-  font-size: 12px;
+  font-size: var(--font-size-xs);
 }
 
 .text-muted {
@@ -182,14 +182,20 @@ body {
 ===================================================== */
 
 .card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
+  padding: 0.75rem;
+  cursor: pointer;;
 }
 
 .card:hover {
   box-shadow: var(--shadow-lg);
+  background-color: var(--bg-hover);
 }
 
 /* =====================================================

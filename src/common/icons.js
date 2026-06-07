@@ -14,7 +14,12 @@ import {
   Newspaper,
   LineChart,
   House,
-  ArrowRight
+  ArrowRight,
+  RefreshCw,
+  Gift,
+  Gem,
+  Split,
+  CalendarDays
 } from "lucide-react";
 
 export const Icons = {
@@ -33,5 +38,10 @@ export const Icons = {
   NewspaperIcon: Newspaper,
   LineChartIcon: LineChart,
   HouseIcon: House,
-  ArrowRightIcon: ArrowRight
+  ArrowRightIcon: ArrowRight,
+  DividendIcon: Gift,
+  BuybackIcon: RefreshCw,
+  BonusIcon: Gem,
+  SplitIcon: Split,
+  CalendarDaysIcon: CalendarDays
 }

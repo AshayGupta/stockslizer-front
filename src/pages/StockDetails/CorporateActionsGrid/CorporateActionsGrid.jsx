@@ -1,37 +1,33 @@
-import {
-  Gift,
-  Split,
-  CalendarDays,
-  RotateCcw,
-} from "lucide-react";
+import { Icons } from "@/common/icons";
 import ActionCard from "./ActionCard";
 
 const CORPORATE_ACTIONS = [
   {
-    icon: Gift,
     title: "Dividend",
     type: 'dividend',
+    icon: Icons.DividendIcon,
+    color: "#138a2f",
     fields: [
-      { label: "Dividend", value: "₹14.00" },
+      { label: null, value: "₹14.00 /share" },
       { label: "Record Date", value: "29 Jun 2024" },
-      { label: "Payment Date", value: "15 Jul 2024" },
-      { label: "Yield", value: "0.48%" },
     ],
   },
   {
-    icon: Gift,
-    title: "Bonus Issue",
-    type: 'bonus',
+    title: "AGM",
+    type: 'agm',
+    icon: Icons.CalendarDaysIcon,
+    color: "#4d5f78",
     fields: [
-      { label: "Record Date", value: "06 Sep 2024" },
-      { label: "Allotment", value: "20 Sep 2024" },
-      { label: "Ratio", value: "1:1" },
+      { label: "Meeting Date", value: "25 May 2024" },
+      { label: "Purpose", value: "Quarterly Results" },
+      { label: "Type", value: "Board Meeting" },
     ],
   },
   {
-    icon: RotateCcw,
     title: "Buyback",
     type: 'buyback',
+    icon: Icons.BuybackIcon,
+    color: "#ed762d",
     fields: [
       { label: "Buyback Size", value: "₹10,000 Cr" },
       { label: "Open", value: "25 Apr 2024" },
@@ -39,9 +35,10 @@ const CORPORATE_ACTIONS = [
     ],
   },
   {
-    icon: Split,
     title: "Stock Split",
     type: 'split',
+    icon: Icons.SplitIcon,
+    color: "#1252e0",
     fields: [
       { label: "Record Date", value: "12 Aug 2024" },
       { label: "Effective", value: "20 Aug 2024" },
@@ -49,23 +46,14 @@ const CORPORATE_ACTIONS = [
     ],
   },
   {
-    icon: CalendarDays,
-    title: "Rights Issue",
-    type: 'rights',
+    title: "Bonus",
+    type: 'bonus',
+    icon: Icons.BonusIcon,
+    color: "#7e2fef",
     fields: [
-      { label: "Meeting Date", value: "25 May 2024" },
-      { label: "Purpose", value: "Quarterly Results" },
-      { label: "Type", value: "Board Meeting" },
-    ],
-  },
-  {
-    icon: CalendarDays,
-    title: "AGM",
-    type: 'agm',
-    fields: [
-      { label: "Meeting Date", value: "25 May 2024" },
-      { label: "Purpose", value: "Quarterly Results" },
-      { label: "Type", value: "Board Meeting" },
+      { label: "Record Date", value: "06 Sep 2024" },
+      { label: "Allotment", value: "20 Sep 2024" },
+      { label: "Ratio", value: "1:1" },
     ],
   },
 ];
@@ -73,22 +61,24 @@ const CORPORATE_ACTIONS = [
 export default function CorporateActionsGrid() {
   const ActionsList = () => {
     return (
-      <div className="grid grid-cols-3 gap-4 p-4">
+      <div className="columns-3 gap-2">
         {CORPORATE_ACTIONS.map((action) => (
-          <ActionCard
+          <div
             key={action.type}
-            {...action}
-          />
+            className="mb-2 break-inside-avoid"
+          >
+            <ActionCard {...action} />
+          </div>
         ))}
       </div>
     );
   };
 
   return (
-    <div className="grid grid-cols-2 gap-4 p-4">
+    <div className="grid grid-cols-2 gap-4 p-2">
       <ActionsList />
 
-      <div className="card p-5">
+      <div className="card">
         <div className="flex justify-between">
           <h3 className="text-card-title">
             Announcements / Board Meetings

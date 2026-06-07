@@ -21,7 +21,7 @@ const NavItem = ({ to, icon: Icon, label, testId, iconColor }) => {
 
 const Sidebar = () => {
   return (
-    <aside className="sidebar w-50 shrink-0 h-screen flex flex-col shadow-md">
+    <aside className="sidebar w-48 shrink-0 h-screen flex flex-col shadow-md">
       <div className="sidebar-header shadow-sm">
         <div className="w-8 h-8 sidebar-brand-icon">
           <Icons.ChartColumnIcon size={18} className="text-white" />
