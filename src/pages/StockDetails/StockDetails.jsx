@@ -1,5 +1,5 @@
 import { Icons } from "@/common/icons";
-import { Container, ScrollableContent } from "@/components/styledComponents";
+import { PageContainer, ScrollableContent } from "@/components/styledComponents";
 import CorporateActionsGrid from "@/pages/StockDetails/CorporateActionsGrid/CorporateActionsGrid";
 import DetailsSectionTabs from "@/pages/StockDetails/DetailsSectionTabs/DetailsSectionTabs";
 import Overview from "@/pages/StockDetails/Overview/Overview";
@@ -18,17 +18,20 @@ export default function StockDetailsPage() {
   const [tabSelectedComponent, setTabSelectedComponent] = useState(<Overview/>);
 
   return (
-    <Container className="flex-auto">
-      <StockHeader
-        symbol="AAPL"
-        companyName="Apple Inc."
-        price={150.0}
-        change={2.5}
-      />
-      <DetailsSectionTabs tabs={tabs} onTabSelect={setTabSelectedComponent} />
+    <PageContainer className="flex-auto gap-3">
+      <div className="container-style">
+        <StockHeader
+          symbol="AAPL"
+          companyName="Apple Inc."
+          price={150.0}
+          change={2.5}
+        />
+        <DetailsSectionTabs tabs={tabs} onTabSelect={setTabSelectedComponent} />
+      </div>
+
       <ScrollableContent>
         {tabSelectedComponent}
       </ScrollableContent>
-    </Container>
+    </PageContainer>
   );
 }

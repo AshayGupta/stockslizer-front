@@ -1,15 +1,16 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
   overflow: hidden;
-  background: var(--bg-card);
-  color: var(--text-primary);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  box-shadow: var(--shadow-default);
+`;
+
+export const ScrollableContent = styled.div`
+  flex: 1;
+  overflow-y: auto;
+  background: var(--bg-body);
 `;
 
 export const SearchBar = styled.div`
@@ -51,11 +52,4 @@ export const Separator = styled.div`
   width: 100%;
   height: 1px;
   background: var(--separator);
-`;
-
-export const ScrollableContent = styled.div`
-  flex: 1;
-  overflow-y: auto;
-  padding: 0.5rem;
-  background: var(--bg-body);
 `;

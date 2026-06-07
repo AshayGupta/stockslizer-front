@@ -1,4 +1,3 @@
-import { Separator } from "@/components/styledComponents";
 import { useState } from "react";
 import styled from "styled-components";
 
@@ -60,7 +59,6 @@ export default function DetailsSectionTabs({ tabs, onTabSelect }) {
           );
         })}
       </TabsContainer>
-      <Separator />
     </div>
   );
 }

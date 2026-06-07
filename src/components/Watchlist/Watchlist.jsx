@@ -1,5 +1,5 @@
 import { Icons } from "@/common/icons";
-import { Container, EmptyRecord, SearchBar } from "@/components/styledComponents";
+import { EmptyRecord, PageContainer, SearchBar } from "@/components/styledComponents";
 import { DeleteButton, Price, PriceChange, PriceInfo, StockDetails, StockInfo, StockName, StockRow, StockSymbol, TableContainer, TableHeader } from "@/components/Watchlist/Watchlist.style";
 import { Tooltip } from "@mui/material";
 import { useMemo, useState } from "react";
@@ -111,7 +111,7 @@ const Watchlist = () => {
   );
 
   return (
-    <Container className="w-fit">
+    <PageContainer className="container-style w-fit">
       <SearchBar>
         <input
           value={searchQ}
@@ -169,7 +169,7 @@ const Watchlist = () => {
           </SwipeableList>
         )}
       </TableContainer>
-    </Container>
+    </PageContainer>
   );
 };
 
