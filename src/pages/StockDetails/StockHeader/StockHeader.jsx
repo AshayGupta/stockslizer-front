@@ -15,7 +15,7 @@ export default function StockHeader() {
             />
 
             <div>
-              <h1 className="text-title">
+              <h1 className="stock-title">
                 Reliance Industries Ltd.
               </h1>
               <div className="text-subtitle text-muted">

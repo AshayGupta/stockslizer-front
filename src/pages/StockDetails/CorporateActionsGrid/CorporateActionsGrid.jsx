@@ -6,7 +6,8 @@ const CORPORATE_ACTIONS = [
     title: "Dividend",
     type: 'dividend',
     icon: Icons.DividendIcon,
-    color: "#138a2f",
+    // color: "#138a2f",
+    color: "#7e2fef",
     fields: [
       { label: null, value: "₹14.00 /share" },
       { label: "Record Date", value: "29 Jun 2024" },
@@ -16,7 +17,8 @@ const CORPORATE_ACTIONS = [
     title: "AGM",
     type: 'agm',
     icon: Icons.CalendarDaysIcon,
-    color: "#4d5f78",
+    // color: "#4d5f78",
+    color: "#7e2fef",
     fields: [
       { label: "Meeting Date", value: "25 May 2024" },
       { label: "Purpose", value: "Quarterly Results" },
@@ -27,7 +29,8 @@ const CORPORATE_ACTIONS = [
     title: "Buyback",
     type: 'buyback',
     icon: Icons.BuybackIcon,
-    color: "#ed762d",
+    // color: "#ed762d",
+    color: "#7e2fef",
     fields: [
       { label: "Buyback Size", value: "₹10,000 Cr" },
       { label: "Open", value: "25 Apr 2024" },
@@ -38,7 +41,8 @@ const CORPORATE_ACTIONS = [
     title: "Stock Split",
     type: 'split',
     icon: Icons.SplitIcon,
-    color: "#1252e0",
+    // color: "#1252e0",
+    color: "#7e2fef",
     fields: [
       { label: "Record Date", value: "12 Aug 2024" },
       { label: "Effective", value: "20 Aug 2024" },
@@ -49,6 +53,7 @@ const CORPORATE_ACTIONS = [
     title: "Bonus",
     type: 'bonus',
     icon: Icons.BonusIcon,
+    // color: "#7e2fef",
     color: "#7e2fef",
     fields: [
       { label: "Record Date", value: "06 Sep 2024" },
