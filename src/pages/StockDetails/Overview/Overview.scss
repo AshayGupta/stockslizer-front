@@ -1,8 +1,9 @@
 .about-card {
-    border-radius: var(--radius-sm) !important;
-    gap: 0.25rem !important;
-    cursor: default !important;
     margin-bottom: 0.25rem;
+
+    p {
+        font-size: var(--font-size-sm);
+    }
 }
 
 .about-card:hover {

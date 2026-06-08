@@ -9,7 +9,7 @@ export default function ActionCard({
 
   return (
     <div className="card">
-      <div className="flex gap-3 mb-2 items-center">
+      <div className="flex gap-3 items-center">
         <Icon size={18} color={color} />
         <h3 className="text-card-title">{title}</h3>
       </div>

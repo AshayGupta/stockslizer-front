@@ -44,29 +44,19 @@ export const StockInfo = styled.div`
   gap: 0.75rem;
 `;
 
-// export const StockLogo = styled.div`
-//   font-size: 1.75rem;
-//   width: 2rem;
-//   height: 2rem;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   border-radius: var(--radius-sm);
-// `;
-
 export const StockDetails = styled.div`
   display: flex;
   flex-direction: column;
 `;
 
 export const StockSymbol = styled.div`
+  font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
   color: var(--text-primary);
-  font-size: var(--font-size-md);
 `;
 
 export const StockName = styled.div`
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-ls);
   color: var(--text-secondary);
 `;
 
@@ -79,14 +69,14 @@ export const PriceInfo = styled.div`
 `;
 
 export const Price = styled.div`
+  font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
-  font-size: var(--font-size-md);
   color: var(--text-primary);
 `;
 
 export const PriceChange = styled.div`
   text-align: right;
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-ls);
   font-weight: var(--font-weight-medium);
   color: ${({$isPositive}) => $isPositive ? "var(--success)" : "var(--danger)" };
 `;

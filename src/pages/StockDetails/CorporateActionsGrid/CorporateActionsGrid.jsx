@@ -79,9 +79,9 @@ export default function CorporateActionsGrid() {
       <ActionsList />
 
       <div className="card">
-        <div className="flex gap-3 mb-2 items-center">
+        <div className="flex gap-3 items-center">
           <Icons.PresentationIcon size={18} color="#e19d36" />
-          <h3 className="text-card-title" style={{color: "#e19d36"}}>Announcements / Board Meetings</h3>
+          <h3 className="text-card-title">Announcements / Board Meetings</h3>
         </div>
 
         <div className="space-y-3">

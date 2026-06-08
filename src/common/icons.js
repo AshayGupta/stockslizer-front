@@ -21,6 +21,17 @@ import {
   Split,
   CalendarDays,
   Presentation,
+  Building2,
+  BadgeIndianRupee,
+  Wallet,
+  Coins,
+  TrendingUp,
+  Percent,
+  CircleDollarSign,
+  BookOpen,
+  Banknote,
+  Scale,
+  ShieldCheck,
 } from "lucide-react";
 
 export const Icons = {
@@ -45,5 +56,16 @@ export const Icons = {
   BonusIcon: Gem,
   SplitIcon: Split,
   CalendarDaysIcon: CalendarDays,
-  PresentationIcon: Presentation
+  PresentationIcon: Presentation,
+  Building2Icon: Building2,
+  BadgeIndianRupeeIcon: BadgeIndianRupee,
+  WalletIcon: Wallet,
+  CoinsIcon: Coins,
+  TrendingUpIcon: TrendingUp,
+  PercentIcon: Percent,
+  CircleDollarSignIcon: CircleDollarSign,
+  BookOpenIcon: BookOpen,
+  BanknoteIcon: Banknote,
+  ScaleIcon: Scale,
+  ShieldCheckIcon: ShieldCheck,
 }
