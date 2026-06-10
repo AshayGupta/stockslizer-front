@@ -17,7 +17,7 @@ export default function StockHeader() {
               <h1 className="stock-title">
                 Reliance Industries Ltd.
               </h1>
-              <div className="text-subtitle text-muted">
+              <div className="text-subtitle text-secondary">
                 RELIANCE • NSE
               </div>
             </div>
@@ -25,12 +25,12 @@ export default function StockHeader() {
 
           <div className="flex gap-3 mt-2 ml-14 items-center">
             <div className="text-sm font-medium">
-              ₹2,912.40
+              ₹ 2,912.40
             </div>
             <div className="text-sm font-medium text-[var(--success)]">
               +35.90 (+1.25%)
             </div>
-            <div className="text-[10px] text-muted">
+            <div className="text-[10px] text-secondary">
               As on 20 May 2024, 03:30 PM IST
             </div>
           </div>

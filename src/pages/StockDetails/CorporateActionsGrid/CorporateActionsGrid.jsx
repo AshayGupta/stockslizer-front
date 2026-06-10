@@ -91,7 +91,7 @@ export default function CorporateActionsGrid() {
 
               <div className="flex flex-col">
                 <span className="font-medium">Reliance Q4 Results...</span>
-                <span className="text-small text-muted">Economic Times • 20 May 2024</span>
+                <span className="text-small text-secondary">Economic Times • 20 May 2024</span>
               </div>
             </div>
           ))}

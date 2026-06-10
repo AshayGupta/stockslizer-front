@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap");
 @import "tailwindcss";
 
 /* =====================================================
@@ -6,43 +6,43 @@
 ===================================================== */
 
 :root {
-  --font-body: 'Inter', system-ui, sans-serif;
-  --font-display: 'Inter', system-ui, sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-display: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
 
   --radius-xs: 6px;
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
 
-  --shadow-sm: 0 1px 2px rgba(0,0,0,.06);
-  --shadow-md: 0 4px 12px rgba(0,0,0,.08);
-  --shadow-lg: 0 12px 30px rgba(0,0,0,.12);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 12px 30px rgba(0, 0, 0, 0.12);
   --shadow-default:
-  0 1px 2px rgba(0, 0, 0, 0.04),
-  0 4px 12px rgba(0, 0, 0, 0.06);
+    0 1px 2px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.06);
 
-  --transition: all .2s ease;
+  --transition: all 0.2s ease;
 
-  --font-size-xs: 0.625rem;     /*  10px badges/labels Text */
-  --font-size-ls: 0.675rem;     /*  11px badges/labels Text */
-  --font-size-sm: 0.75rem;      /*  12px Secondary Text */
-  --font-size-md: 0.875rem;     /*  14px Normal Text  */
-  --font-size-lg: 1rem;         /*  16px Card Title Text */
-  --font-size-xl: 1.25rem;      /*  20px Section Header Text */
+  --font-size-xs: 0.625rem; /*  10px badges/labels Text */
+  --font-size-ls: 0.675rem; /*  11px badges/labels Text */
+  --font-size-sm: 0.75rem; /*  12px Secondary Text */
+  --font-size-md: 0.875rem; /*  14px Normal Text  */
+  --font-size-lg: 1rem; /*  16px Card Title Text */
+  --font-size-xl: 1.25rem; /*  20px Section Header Text */
   --font-weight-normal: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
-  --DashboardIcon: #FF3B30;
-  --BellIcon: #FFB020;
-  --NewsIcon: #0A84FF;
-  --SettingsIcon: #6B7280;
+  --DashboardIcon: #ff493d;
+  --BellIcon: #ffb31f;
+  --NewsIcon: #0a85ff;
+  --SettingsIcon: #6b7280;
+  --StockTitle: #8a2be2;
 }
 
 /* =====================================================
-   LIGHT THEME
+  LIGHT THEME AND DARK THEME
 ===================================================== */
 
 .light {
@@ -51,70 +51,68 @@
   --bg-active: #eef4ff;
   --bg-sidebar: #fafbfc;
   --bg-icon: #e8edf3;
-  
-  --text-primary: #111827;
-  --text-secondary: #64748b;
-  --text-muted: #94a3b8;
-  --text-brand-color: #0D9488;
-  
-  --primary: #2563eb;
-  --success: #16a34a;
-  --danger: #dc2626;
-  --warning: #ea580c;
-  --emerald: #059669;
-  --indigo: #4f46e5;
-  --dark-theme-accent: #facc15;
-  
-  --border: #e5e7eb;
-  --border-light: #f3f4f6;
-  --active-border: #60a5fa;
-  --icon: #64748b;
-  --separator: #f1f5f9;
-  
-  --bg-hover: #f2f6fa;
-  --primary-hover: #1d4ed8;
-  --danger-hover: #b91c1c;
-}
 
-/* =====================================================
-   DARK THEME
-===================================================== */
+  --text-primary: #111827;
+  --text-secondary: #5f728a;
+  --text-muted: #97a5b6;
+  --text-brand-color: #0d968b;
+
+  --primary: #2563eb;
+  --success: #21c45b;
+  --danger: #dc2828;
+  --warning: #db5a06;
+
+  --emerald: #0d9671;
+  --indigo: #5146e6;
+  --dark-theme-accent: #fbcb13;
+
+  --border: #e4e7eb;
+  --border-light: #f2f5f7;
+  --active-border: #60a6fa;
+  --icon: #5f728a;
+  --separator: #f1f5f9;
+
+  --bg-hover: #f2f6f9;
+  --primary-hover: #1d4fd8;
+  --danger-hover: #ba1c1c;
+}
 
 .dark {
   --bg-body: #090a0c;
-  --bg-card: #121826;
-  --bg-active: rgba(34,211,238,.12);
+  --bg-card: #121827;
+  --bg-active: rgba(36, 211, 231, 0.12);
   --bg-sidebar: #0f172a;
-  --bg-icon: #2d3a4d;
-  
+  --bg-icon: #2d3b4d;
+
   --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
-  --text-brand-color: #2DD4BF;
-  
-  --primary: #60A5FA;
-  --success: #22c55e;
+  --text-secondary: #97a5b6;
+  --text-muted: #5f728a;
+  --text-brand-color: #2dd4bf;
+
+  --primary: #60a5fa;
+  --success: #31dc6d;
   --danger: #ef4444;
-  --warning: #f59e0b;
-  --emerald: #10b981;
+  --warning: #f5a10a;
+
+  --emerald: #10b881;
   --indigo: #818cf8;
-  --dark-theme-accent: #fde047;
-  
-  --icon: #94a3b8;
-  --border: #243041;
-  --border-light: #1e293b;
-  --active-border: #22d3ee;
-  --separator: #f1f5f9;  
-  
+  --dark-theme-accent: #fde048;
+
+  --icon: #97a5b6;
+  --border: #253142;
+  --border-light: #213040;
+  --active-border: #24d3e7;
+  --separator: #253142;
+
   --bg-hover: #253142;
-  --primary-hover: #93C5FD;
-  --danger-hover: #b91c1c;  
+  --primary-hover: #93c6fd;
+  --danger-hover: #ba1c1c;
 }
 
 /* =====================================================
 GLOBAL
 ===================================================== */
-   
+
 html,
 body,
 #root {
@@ -144,13 +142,6 @@ body {
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-semibold);
 }
-
-.stock-title {
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-semibold);
-  color: #ed762d
-}
-
 .text-subtitle {
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-medium);
@@ -170,8 +161,14 @@ body {
   font-size: var(--font-size-xs);
 }
 
-.text-muted {
+.text-secondary {
   color: var(--text-secondary);
+}
+
+.stock-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-medium);
+  color: var(--StockTitle);
 }
 
 .font-mono {
@@ -198,7 +195,8 @@ body {
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-sm);
-  padding: 0.5rem 0.75rem;}
+  padding: 0.5rem 0.75rem;
+}
 
 .card-hover:hover {
   box-shadow: var(--shadow-md);
@@ -208,7 +206,7 @@ body {
 .text-card-title {
   font-size: var(--font-size-md);
   font-weight: 500;
-  color: var(--indigo);
+  color: #9b2f2f;
 }
 
 /* =====================================================

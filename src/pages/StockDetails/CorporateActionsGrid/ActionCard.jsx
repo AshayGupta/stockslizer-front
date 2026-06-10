@@ -18,7 +18,7 @@ export default function ActionCard({
         {fields.map((field, idx) => (
           <div key={`${type}_${field.value}_${idx}`} className="flex flex-col">
             { field.label && 
-              <span className="text-small text-muted">{field.label}</span>
+              <span className="text-small text-secondary">{field.label}</span>
             }
             <span >{field.value}</span>
           </div>
