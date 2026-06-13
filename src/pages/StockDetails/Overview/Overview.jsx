@@ -1,6 +1,7 @@
 import { Icons } from "@/common/icons";
 import Listview from "@/pages/StockDetails/Overview/Listview/Listview";
 import "./Overview.scss";
+import ShareholdingPattern from "@/pages/StockDetails/Overview/ShareholdingPattern/ShareholdingPattern";
 
 const key_metrics = [
   {
@@ -270,6 +271,7 @@ const Overview = () => {
 
         <div className="card">
           <h3 className="text-card-title">Shareholding Pattern</h3>
+          <ShareholdingPattern />
         </div>
 
         <div className="card">

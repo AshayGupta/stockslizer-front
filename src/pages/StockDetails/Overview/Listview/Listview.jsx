@@ -9,7 +9,6 @@ const Row = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: var(--font-size-sm);
   padding-bottom: 0.25rem;
   border-bottom: 1px solid var(--border-light);
 

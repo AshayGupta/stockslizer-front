@@ -102,7 +102,7 @@
 // 							: "Popular Indian Stocks"}
 // 					</div>
 // 					{list.length === 0 && !loading && (
-// 						<div className="px-3 py-6 text-center text-sm text-[#6B7280]">
+// 						<div className="px-3 py-6 text-center text-small text-[#6B7280]">
 // 							No matches
 // 						</div>
 // 					)}
@@ -114,7 +114,7 @@
 // 							className="w-full text-left px-3 py-2 rounded-md hover:bg-[#E6FFFA] flex items-center justify-between group transition-colors"
 // 						>
 // 							<div>
-// 								<div className="font-mono text-sm font-semibold text-[#111827]">
+// 								<div className="font-mono text-small font-semibold text-[#111827]">
 // 									{cleanSym(it.symbol)}
 // 								</div>
 // 								<div className="text-xs text-[#6B7280]">{it.name}</div>

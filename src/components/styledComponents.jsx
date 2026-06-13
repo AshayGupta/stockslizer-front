@@ -41,7 +41,6 @@ export const InputWrapper = styled.div`
     border-radius: var(--radius-sm);
     background: var(--bg-body);
     color: var(--text-primary);
-    font-size: var(--font-size-sm);
 
     &::placeholder {
       color: var(--text-muted);

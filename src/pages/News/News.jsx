@@ -21,12 +21,12 @@ const News = () => {
     <div className="p-6 space-y-5" data-testid="news-page">
       <div>
         <h1 className="font-display text-3xl font-semibold tracking-tight text-[#111827] mt-1">Indian Market Insights</h1>
-        <p className="text-sm text-[#6B7280] mt-1">Aggregated from Google News &amp; Yahoo Finance : free public sources</p>
+        <p className="text-small text-[#6B7280] mt-1">Aggregated from Google News &amp; Yahoo Finance : free public sources</p>
       </div>
 
       <div className="bg-[#fff] border border-[#e9e9e9] rounded-md">
         {loading && <Loader />}
-        {!loading && news.length === 0 && <div className="p-8 text-center text-sm text-[#6B7280]">No news available</div>}
+        {!loading && news.length === 0 && <div className="p-8 text-center text-small text-[#6B7280]">No news available</div>}
         <div className="divide-y divide-[#e9e9e9]">
           {news.map((n, i) => (
             <a
@@ -41,7 +41,7 @@ const News = () => {
                 <BsNewspaper size={16} />
               </div>
               <div className="min-w-0 flex-1">
-                <div className="text-sm text-[#111827]">{n.title}</div>
+                <div className="text-small text-[#111827]">{n.title}</div>
                 <div className="text-[11px] text-[#6B7280] mt-1 font-mono flex gap-3">
                   <span>{n.source}</span>
                   {n.published && <span>· {n.published}</span>}

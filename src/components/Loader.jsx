@@ -6,7 +6,7 @@ export const Loader = ({ loadingTxt="Fetching latest updates..." }) => {
         <div className="absolute inset-0 h-12 w-12 animate-spin rounded-full border-4 border-transparent border-t-teal-600 border-r-blue-600"></div>
       </div>
 
-      <span className="mt-4 text-sm font-medium text-slate-600">
+      <span className="mt-4 text-small font-medium text-slate-600">
         {loadingTxt}
       </span>
     </div>

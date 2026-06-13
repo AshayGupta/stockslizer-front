@@ -7,7 +7,6 @@ export const TableHeader = styled.div`
   gap: 1rem;
   padding: 0.25rem 1.5rem;
   font-weight: var(--font-weight-medium);
-  font-size: var(--font-size-sm);
   color: var(--text-secondary);
   letter-spacing: 0.05em;
 `;
@@ -50,7 +49,6 @@ export const StockDetails = styled.div`
 `;
 
 export const StockSymbol = styled.div`
-  font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
   color: var(--text-primary);
 `;
@@ -69,7 +67,6 @@ export const PriceInfo = styled.div`
 `;
 
 export const Price = styled.div`
-  font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
   color: var(--text-primary);
 `;

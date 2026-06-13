@@ -24,10 +24,10 @@ export default function StockHeader() {
           </div>
 
           <div className="flex gap-3 mt-2 ml-14 items-center">
-            <div className="text-sm font-medium">
+            <div className="font-medium">
               ₹ 2,912.40
             </div>
-            <div className="text-sm font-medium text-[var(--success)]">
+            <div className="font-medium text-[var(--success)]">
               +35.90 (+1.25%)
             </div>
             <div className="text-[10px] text-secondary">

@@ -13,7 +13,7 @@ const Settings = () => {
           <Icons.InfoIcon size={20} className="text-[#0A84FF] mt-0.5" />
           <div>
             <div className="font-semibold text-[#111827]">Data Sources</div>
-            <div className="text-sm text-[#6B7280] mt-1">
+            <div className="text-small text-[#6B7280] mt-1">
               This terminal uses <span className="font-mono text-[#111827]">Yahoo Finance</span> (NSE/BSE quotes &amp; history),
               <span className="font-mono text-[#111827]"> Google News RSS</span> (headlines), and yfinance
               <span className="font-mono text-[#111827]"> corporate actions</span> — all free and public.
@@ -23,7 +23,7 @@ const Settings = () => {
 
         <div className="border-t border-[#e9e9e9] pt-4">
           <div className="font-semibold text-[#111827] mb-2">Background Scanner</div>
-          <div className="text-sm text-[#6B7280]">
+          <div className="text-small text-[#6B7280]">
             KPI rules (volume spikes &amp; news) are scanned every <span className="font-mono text-[#111827]">5 minutes</span> automatically.
             Use the <span className="font-mono text-[#111827]">Scan</span> button in the top bar to run immediately.
           </div>
@@ -31,7 +31,7 @@ const Settings = () => {
 
         <div className="border-t border-[#e9e9e9] pt-4">
           <div className="font-semibold text-[#111827] mb-2">Symbol Format</div>
-          <div className="text-sm text-[#6B7280]">
+          <div className="text-small text-[#6B7280]">
             Indian stocks use suffixes:
             <span className="font-mono text-[#111827]"> .NS</span> for NSE (e.g. RELIANCE.NS) and
             <span className="font-mono text-[#111827]"> .BO</span> for BSE (e.g. RELIANCE.BO).
@@ -41,7 +41,7 @@ const Settings = () => {
 
         <div className="border-t border-[#e9e9e9] pt-4">
           <div className="font-semibold text-[#111827] mb-2">About Zerodha</div>
-          <div className="text-sm text-[#6B7280]">
+          <div className="text-small text-[#6B7280]">
             Zerodha Kite Connect API is a <span className="text-[#FFB020]">paid</span> service (₹2000/month).
             This app uses free alternatives for the same functionality. To enable Zerodha integration in future,
             add your Kite Connect API key under a future <span className="font-mono text-[#111827]">Integrations</span> tab.
