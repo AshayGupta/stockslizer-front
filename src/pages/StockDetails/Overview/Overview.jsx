@@ -257,7 +257,7 @@ const Overview = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-3 gap-2">
+      <div className="grid grid-cols-[250px_1fr_1fr] gap-2">
         <div className="card">
           <h3 className="text-card-title">Key Metrics</h3>
           <Listview items={key_metrics}/>

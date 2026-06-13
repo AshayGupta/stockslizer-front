@@ -29,7 +29,7 @@ const IconItem = styled.span`
 
 const Label = styled.span`
   display: flex;
-  gap: 1rem;
+  gap: 0.75rem;
   color: var(--text-secondary);
 `;
 
