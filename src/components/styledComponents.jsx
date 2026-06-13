@@ -18,10 +18,25 @@ export const SearchBar = styled.div`
   align-items: center;
   gap: 0.75rem;
   padding: 0.75rem;
+`;
+
+export const InputWrapper = styled.div`
+  position: relative;
+  flex: 1;
+
+  svg {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    pointer-events: none;
+  }
 
   input {
-    flex: 1;
-    padding: 0.5rem 0.75rem;
+    width: 100%;
+    height: 2rem;
+    padding: 0.5rem 0.75rem 0.5rem 2.25rem;
     border: 1px solid var(--border);
     border-radius: var(--radius-sm);
     background: var(--bg-body);

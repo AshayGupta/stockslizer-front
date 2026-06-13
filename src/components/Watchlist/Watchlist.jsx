@@ -1,5 +1,5 @@
 import { Icons } from "@/common/icons";
-import { EmptyRecord, PageContainer, SearchBar } from "@/components/styledComponents";
+import { EmptyRecord, InputWrapper, PageContainer, SearchBar } from "@/components/styledComponents";
 import { DeleteButton, Price, PriceChange, PriceInfo, StockDetails, StockInfo, StockName, StockRow, StockSymbol, TableContainer, TableHeader } from "@/components/Watchlist/Watchlist.style";
 import { Tooltip } from "@mui/material";
 import { useMemo, useState } from "react";
@@ -113,12 +113,16 @@ const Watchlist = () => {
   return (
     <PageContainer className="container-style w-fit flex-none">
       <SearchBar>
-        <input
-          value={searchQ}
-          onChange={(e) => setSearchQ(e.target.value)}
-          placeholder="Search Stocks..."
-          data-testid="watchlist-search"
-        />
+        <InputWrapper>
+          <Icons.SearchIcon size={14} color="var(--primary)" />
+          <input
+            value={searchQ}
+            onChange={(e) => setSearchQ(e.target.value)}
+            placeholder="Search for a company"
+            data-testid="watchlist-search"
+          />
+        </InputWrapper>
+
         <Tooltip title="Add Stock" arrow>
           <span className="cursor-pointer" onClick={() => ""}>
             <Icons.CirclePlusIcon 

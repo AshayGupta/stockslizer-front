@@ -23,38 +23,51 @@ const Row = styled.div`
   }
 `;
 
-const Label = styled.span`
-  display: flex;
-  gap: 0.5rem;
-  color: var(--text-secondary);
-`;
-
 const IconItem = styled.span`
   color: var(--text-secondary);
 `;
 
+const Label = styled.span`
+  display: flex;
+  gap: 1rem;
+  color: var(--text-secondary);
+`;
+
 const Value = styled.span`
-  font-weight: var(--font-weight-semibold);
-  color: ${({ $color }) =>
-    $color === "positive" ? "var(--success)"
-    : $color === "negative" ? "var(--danger)"
-    : $color ? $color
-    : "var(--text-primary)"};
+font-weight: var(--font-weight-medium);
+color: ${({ $color }) =>
+    $color ? $color : "var(--text-primary)"};
+`;
+
+const Link = styled.a`
+    text-decoration: underline;
+    
+    &:hover {
+        color: var(--primary-hover);
+        background: var(--bg-hover);
+    }
 `;
 
 const ListView = ({ items = [] }) => {
   return (
     <Container>
-      {items.map((item) => {
-        const Icon = item.icon;
+      {items.map(({key, icon, label, value, color, type}) => {
+        const Icon = icon;
 
         return (
-          <Row key={item.key}>
+          <Row key={key}>
             <Label>
-              {item.icon && <IconItem>{<Icon size={16} color={item.color} />}</IconItem>}
-              {item.label}
+              {icon && <IconItem>{<Icon size={16} color={color} />}</IconItem>}
+              {label}
             </Label>
-            <Value $color={item.color}>{item.value}</Value>
+            <Value $color={color}>
+              {type?.name === "link" ? (
+                <Link href={type.value} target="_blank" rel="noopener noreferrer">
+                  {value}
+                </Link>
+              ) 
+              : ( value )}
+            </Value>
           </Row>
         );
       })}

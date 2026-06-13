@@ -1,4 +1,5 @@
 import {
+  Search,
   Bell,
   ChartColumn,
   FileText,
@@ -35,6 +36,7 @@ import {
 } from "lucide-react";
 
 export const Icons = {
+  SearchIcon: Search,
   BellIcon: Bell,
   ChartColumnIcon: ChartColumn,
   FileTextIcon: FileText,

@@ -8,7 +8,7 @@ const key_metrics = [
     label: "Market Cap",
     value: "₹19.70 L Cr",
     icon: Icons.Building2Icon,
-    color: "var(--indigo)",
+    color: "var(--purple)",
   },
   {
     key: 'current_pe',
@@ -66,31 +66,31 @@ const price_stats = [
     key: 'price',
     label: "Current Price",
     value: "₹2,912.40",
-    color: "positive",
+    color: "var(--success)",
   },
   {
     key: '52_week_high',
     label: "52W High",
     value: "₹3,217.90",
-    color: "positive",
+    color: "var(--success)",
   },
   {
     key: '52_week_low',
     label: "52W Low",
     value: "₹2,220.30",
-    color: "negative",
+    color: "var(--danger)",
   },
   {
     key: 'day_high',
     label: "Day High",
     value: "₹2,925.00",
-    color: "positive",
+    color: "var(--success)",
   },
   {
     key: 'day_low',
     label: "Day Low",
     value: "₹2,885.00",
-    color: "negative",
+    color: "var(--danger)",
   },
   {
     key: 'avg_vol',
@@ -115,14 +115,14 @@ const financial_highlight = [
     "label": "Revenue",
     "value": "₹8,90,123 Cr",
     "icon": Icons.BanknoteIcon,
-    "color": "var(--primary)"
+    "color": "var(--purple)"
   },
   {
     "key": "netProfit",
     "label": "Net Profit",
     "value": "₹74,227 Cr",
     "icon": Icons.ChartColumnIcon,
-    "color": "var(--indigo)"
+    "color": "var(--primary)"
   },
   {
     "key": "operatingProfit",
@@ -168,6 +168,80 @@ const financial_highlight = [
   }
 ];
 
+const company_information = [
+  {
+    key: "sector",
+    label: "Sector",
+    value: "Oil, Gas & Consumable Fuels",
+    // icon: Icons.BriefcaseIcon,
+    // color: "var(--primary)",
+  },
+  {
+    key: "industry",
+    label: "Industry",
+    value: "Integrated Oil & Gas",
+    // icon: Icons.FactoryIcon,
+    // color: "var(--purple)",
+  },
+  {
+    key: "marketCap",
+    label: "Market Cap",
+    value: "₹19.70 Lakh Crore",
+    // icon: Icons.Building2Icon,
+    // color: "var(--emerald)",
+  },
+  {
+    key: "enterpriseValue",
+    label: "Enterprise Value",
+    value: "₹25.80 Lakh Crore",
+    // icon: Icons.LandmarkIcon,
+    // color: "var(--dark-theme-accent)",
+  },
+  {
+    key: "promoterHolding",
+    label: "Promoter Holding",
+    value: "50.31%",
+    // icon: Icons.UsersIcon,
+    // color: "var(--primary)",
+  },
+  {
+    key: "website",
+    label: "Website",
+    value: "Reliance Industries",
+    type: {name: "link", value: "https://ril.com"},
+    // icon: Icons.GlobeIcon,
+    color: "var(--indigo)",
+  },
+  {
+    key: "nseSymbol",
+    label: "NSE Symbol",
+    value: "RELIANCE",
+    // icon: Icons.BadgeInfoIcon,
+    // color: "var(--emerald)",
+  },
+  {
+    key: "bseCode",
+    label: "BSE Code",
+    value: "500325",
+    // icon: Icons.HashIcon,
+    // color: "var(--purple)",
+  },
+  {
+    key: "isin",
+    label: "ISIN",
+    value: "INE002A01018",
+    // icon: Icons.FingerprintIcon,
+    // color: "var(--primary)",
+  },
+  {
+    key: "faceValue",
+    label: "Face Value",
+    value: "₹10",
+    // icon: Icons.BadgeIndianRupeeIcon,
+    // color: "var(--dark-theme-accent)",
+  },
+];
+
 const Overview = () => {
   return (
     <div className="overview-container">
@@ -205,11 +279,12 @@ const Overview = () => {
 
         <div className="card">
           <h3 className="text-card-title">Company Information</h3>
+          <Listview items={company_information} />
         </div>
 
-        <div className="card">
+        {/* <div className="card">
           <h3 className="text-card-title">Other Details</h3>
-        </div>
+        </div> */}
       </div>
     </div>
   );
